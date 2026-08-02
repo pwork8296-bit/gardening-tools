@@ -107,7 +107,7 @@ export default function TemplateScript() {
       // ── Modal Video ──────────────────────────────────────────────────────
       let videoSrc = "";
 
-      $(".btn-play").click(function () {
+      $(".btn-play").click(function (this: HTMLElement) {
         videoSrc = $(this).data("src");
       });
 
