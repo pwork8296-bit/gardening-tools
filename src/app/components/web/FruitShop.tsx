@@ -45,12 +45,18 @@ export default function FruitShop() {
               <ul className="nav nav-pills d-inline-flex text-center mb-5">
                 {tabs.map((t) => (
                   <li className="nav-item" key={t.id}>
-                    <button
-                      className={`d-flex m-2 py-2 bg-light rounded-pill border-0${activeTab === t.id ? " active" : ""}`}
-                      onClick={() => setActiveTab(t.id)}
+                    <a
+                      href="#"
+                      className={`d-flex m-2 py-2 bg-light rounded-pill${activeTab === t.id ? " active" : ""}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setActiveTab(t.id);
+                      }}
                     >
-                      <span className="text-dark" style={{ width: "130px" }}>{t.label}</span>
-                    </button>
+                      <span className={activeTab === t.id ? "text-white" : "text-dark"} style={{ width: "130px" }}>
+                        {t.label}
+                      </span>
+                    </a>
                   </li>
                 ))}
               </ul>

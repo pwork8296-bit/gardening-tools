@@ -1,8 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  const isDropdownActive = [
+    "/cart",
+    "/checkout",
+    "/testimonial",
+    "/404",
+  ].includes(pathname);
+
   return (
     <>
       {/* Navbar */}
@@ -47,19 +57,65 @@ export default function Navbar() {
             </button>
             <div className="navbar-collapse bg-white" id="navbarCollapse">
               <div className="navbar-nav mx-auto">
-                <Link href="/" className="nav-item nav-link active">Home</Link>
-                <Link href="/shop" className="nav-item nav-link">Shop</Link>
-                <Link href="/shop-detail" className="nav-item nav-link">Shop Detail</Link>
+                <Link
+                  href="/"
+                  className={`nav-item nav-link${pathname === "/" ? " active" : ""}`}
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/shop"
+                  className={`nav-item nav-link${pathname === "/shop" ? " active" : ""}`}
+                >
+                  Shop
+                </Link>
+                <Link
+                  href="/shop-detail"
+                  className={`nav-item nav-link${pathname === "/shop-detail" ? " active" : ""}`}
+                >
+                  Shop Detail
+                </Link>
                 <div className="nav-item dropdown">
-                  <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                  <a
+                    href="#"
+                    className={`nav-link dropdown-toggle${isDropdownActive ? " active" : ""}`}
+                    data-bs-toggle="dropdown"
+                  >
+                    Pages
+                  </a>
                   <div className="dropdown-menu m-0 bg-secondary rounded-0">
-                    <Link href="/cart" className="dropdown-item">Cart</Link>
-                    <Link href="/checkout" className="dropdown-item">Checkout</Link>
-                    <Link href="/testimonial" className="dropdown-item">Testimonial</Link>
-                    <Link href="/404" className="dropdown-item">404 Page</Link>
+                    <Link
+                      href="/cart"
+                      className={`dropdown-item${pathname === "/cart" ? " active" : ""}`}
+                    >
+                      Cart
+                    </Link>
+                    <Link
+                      href="/checkout"
+                      className={`dropdown-item${pathname === "/checkout" ? " active" : ""}`}
+                    >
+                      Checkout
+                    </Link>
+                    <Link
+                      href="/testimonial"
+                      className={`dropdown-item${pathname === "/testimonial" ? " active" : ""}`}
+                    >
+                      Testimonial
+                    </Link>
+                    <Link
+                      href="/404"
+                      className={`dropdown-item${pathname === "/404" ? " active" : ""}`}
+                    >
+                      404 Page
+                    </Link>
                   </div>
                 </div>
-                <Link href="/contact" className="nav-item nav-link">Contact</Link>
+                <Link
+                  href="/contact"
+                  className={`nav-item nav-link${pathname === "/contact" ? " active" : ""}`}
+                >
+                  Contact
+                </Link>
               </div>
               <div className="d-flex m-3 me-0">
                 <button
