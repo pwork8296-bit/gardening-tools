@@ -30,15 +30,15 @@ export default function TemplateScript() {
       spinner();
 
       // ── Fixed Navbar ─────────────────────────────────────────────────────
-      $(window).scroll(function () {
+      $(window).scroll(function (this: Window) {
         if ($(window).width() < 992) {
-          if ($(window).scrollTop() > 55) {
+          if ($(this).scrollTop() > 55) {
             $(".fixed-top").addClass("shadow");
           } else {
             $(".fixed-top").removeClass("shadow");
           }
         } else {
-          if ($(window).scrollTop() > 55) {
+          if ($(this).scrollTop() > 55) {
             $(".fixed-top").addClass("shadow").css("top", "-55px");
           } else {
             $(".fixed-top").removeClass("shadow").css("top", "0");
@@ -47,8 +47,8 @@ export default function TemplateScript() {
       });
 
       // ── Back to Top ──────────────────────────────────────────────────────
-      $(window).scroll(function () {
-        if ($(window).scrollTop() > 300) {
+      $(window).scroll(function (this: Window) {
+        if ($(this).scrollTop() > 300) {
           $(".back-to-top").fadeIn("slow");
         } else {
           $(".back-to-top").fadeOut("slow");
@@ -123,7 +123,7 @@ export default function TemplateScript() {
       });
 
       // ── Product Quantity ─────────────────────────────────────────────────
-      $(".quantity button").on("click", function () {
+      $(".quantity button").on("click", function (this: HTMLElement) {
         const button = $(this);
         const input = button.closest(".quantity").find("input");
         let value = Number(input.val());
@@ -143,7 +143,6 @@ export default function TemplateScript() {
     }, 100);
 
     return () => clearInterval(timer);
-
   }, []);
 
   return null;
