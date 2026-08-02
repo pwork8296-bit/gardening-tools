@@ -1,12 +1,16 @@
 const vegetables = [
-  { img: "vegetable-item-6.jpg", name: "Parsley",    price: "$4.99 / kg" },
-  { img: "vegetable-item-1.jpg", name: "Parsley",    price: "$4.99 / kg" },
-  { img: "vegetable-item-3.png", name: "Banana",     price: "$7.99 / kg" },
-  { img: "vegetable-item-4.jpg", name: "Bell Pepper", price: "$7.99 / kg" },
-  { img: "vegetable-item-5.jpg", name: "Potatoes",   price: "$7.99 / kg" },
-  { img: "vegetable-item-6.jpg", name: "Parsley",    price: "$7.99 / kg" },
-  { img: "vegetable-item-5.jpg", name: "Potatoes",   price: "$7.99 / kg" },
-  { img: "vegetable-item-6.jpg", name: "Parsley",    price: "$7.99 / kg" },
+  { img: "vegetable-item-6.jpg", name: "Parsley",      price: "$4.99 / kg" },
+  { img: "vegetable-item-1.jpg", name: "Tomatoes",     price: "$4.99 / kg" },
+  { img: "vegetable-item-3.png", name: "Banana",       price: "$7.99 / kg" },
+  { img: "vegetable-item-4.jpg", name: "Bell Pepper",  price: "$7.99 / kg" },
+  { img: "vegetable-item-5.jpg", name: "Potatoes",     price: "$7.99 / kg" },
+  { img: "vegetable-item-6.jpg", name: "Parsley",      price: "$7.99 / kg" },
+  { img: "vegetable-item-5.jpg", name: "Garlic",       price: "$5.99 / kg" },
+  { img: "vegetable-item-1.jpg", name: "Cucumber",     price: "$3.99 / kg" },
+  { img: "vegetable-item-3.png", name: "Spinach",      price: "$4.49 / kg" },
+  { img: "vegetable-item-4.jpg", name: "Capsicum",     price: "$6.99 / kg" },
+  { img: "vegetable-item-5.jpg", name: "Broccoli",     price: "$5.49 / kg" },
+  { img: "vegetable-item-6.jpg", name: "Carrot",       price: "$3.49 / kg" },
 ];
 
 export default function VegetableShop() {

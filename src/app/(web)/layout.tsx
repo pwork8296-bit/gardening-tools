@@ -4,7 +4,8 @@ import Spinner from "../components/web/Spinner";
 import Navbar from "../components/web/Navbar";
 import Footer from "../components/web/Footer";
 import TemplateScript from "../components/web/TemplateScript";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import "../web.css";
 
 export const metadata: Metadata = {
   title: "Gardening Tools - Fresh Organic Produce",
@@ -14,6 +15,8 @@ export const metadata: Metadata = {
 export default function WebLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
+      {/* Bootstrap CSS — from /assets/css/bootstrap.min.css (public folder) */}
+      <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
       {/* Font Awesome */}
       <link
         rel="stylesheet"
@@ -70,6 +73,7 @@ export default function WebLayout({ children }: { children: React.ReactNode }) {
       <Script id="owl-carousel" src="/assets/lib/owlcarousel/owl.carousel.min.js" strategy="afterInteractive" />
       {/* main.js effects via useEffect — no separate script file needed */}
       <TemplateScript />
+      {/* <Script id="main-js" src="/js/main.js" strategy="afterInteractive" /> */}
     </>
   );
 }

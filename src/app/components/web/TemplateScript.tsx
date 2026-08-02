@@ -2,117 +2,65 @@
 
 import { useEffect } from "react";
 
-/**
- * TemplateScript
- *
- * Implements all effects from main.js using useEffect + vanilla JS.
- * Owl Carousel sections poll for jQuery/owlCarousel availability since
- * those are loaded asynchronously via <Script> tags in layout.tsx.
- *
- * Effects ported from main.js:
- *  1. Spinner      — removes .show from #spinner
- *  2. Fixed Navbar — shadow + top offset on scroll
- *  3. Back to Top  — fade in/out + smooth scroll on click
- *  4. Testimonial Carousel — owlCarousel init (.testimonial-carousel)
- *  5. Vegetable Carousel   — owlCarousel init (.vegetable-carousel)
- *  6. Modal Video  — Bootstrap modal show/hide handlers
- *  8. Navbar Collapse — toggler button + close-on-outside-click + desktop expand
- */
+declare global {
+  interface Window {
+    $: any;
+    jQuery: any;
+  }
+}
+
 export default function TemplateScript() {
   useEffect(() => {
+    const init = () => {
+      const $ = window.jQuery || window.$;
 
-    // ── 1. Spinner ─────────────────────────────────────────────────────────
-    setTimeout(() => {
-      const spinner = document.getElementById("spinner");
-      if (spinner) spinner.classList.remove("show");
-    }, 1);
-
-
-    // ── 2. Fixed Navbar ────────────────────────────────────────────────────
-    const handleNavbarScroll = () => {
-      const fixedTop = document.querySelector<HTMLElement>(".fixed-top");
-      if (!fixedTop) return;
-      const scrollY = window.scrollY;
-      const isNarrow = window.innerWidth < 992;
-
-      if (scrollY > 55) {
-        fixedTop.classList.add("shadow");
-        if (!isNarrow) fixedTop.style.top = "-55px";
-      } else {
-        fixedTop.classList.remove("shadow");
-        if (!isNarrow) fixedTop.style.top = "0";
+      if (!$) {
+        console.warn("[TemplateScript] jQuery is not loaded.");
+        return;
       }
-    };
-    window.addEventListener("scroll", handleNavbarScroll);
 
+      // ── Spinner ─────────────────────────────────────────────────────────
+      const spinner = () => {
+        setTimeout(() => {
+          if ($("#spinner").length > 0) {
+            $("#spinner").removeClass("show");
+          }
+        }, 1);
+      };
+      spinner();
 
-    // ── 3. Navbar Collapse ─────────────────────────────────────────────────
-    // Bootstrap adds 'collapse' class which hides #navbarCollapse by default.
-    // We replicate Bootstrap's collapse toggle with vanilla JS as a fallback
-    // in case Bootstrap JS hasn't initialised yet.
-    const navbarCollapse = document.getElementById("navbarCollapse");
-    const toggler = document.querySelector<HTMLElement>(".navbar-toggler");
+      // ── Fixed Navbar ─────────────────────────────────────────────────────
+      $(window).scroll(function () {
+        if ($(window).width() < 992) {
+          if ($(this).scrollTop() > 55) {
+            $(".fixed-top").addClass("shadow");
+          } else {
+            $(".fixed-top").removeClass("shadow");
+          }
+        } else {
+          if ($(this).scrollTop() > 55) {
+            $(".fixed-top").addClass("shadow").css("top", "-55px");
+          } else {
+            $(".fixed-top").removeClass("shadow").css("top", "0");
+          }
+        }
+      });
 
-    // On desktop (navbar-expand-xl = ≥1200px), always show the collapse
-    const applyDesktopState = () => {
-      if (!navbarCollapse) return;
-      if (window.innerWidth >= 1200) {
-        navbarCollapse.classList.add("show");
-      } else if (!navbarCollapse.classList.contains("show")) {
-        navbarCollapse.classList.remove("show");
-      }
-    };
-    applyDesktopState();
-    window.addEventListener("resize", applyDesktopState);
+      // ── Back to Top ──────────────────────────────────────────────────────
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $(".back-to-top").fadeIn("slow");
+        } else {
+          $(".back-to-top").fadeOut("slow");
+        }
+      });
 
-    // Toggler button: toggle 'show' on #navbarCollapse
-    const onTogglerClick = () => {
-      navbarCollapse?.classList.toggle("show");
-    };
-    toggler?.addEventListener("click", onTogglerClick);
+      $(".back-to-top").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
+        return false;
+      });
 
-    // Close menu when clicking outside on mobile
-    const onOutsideClick = (e: MouseEvent) => {
-      if (window.innerWidth >= 1200) return;
-      const target = e.target as Node;
-      if (
-        navbarCollapse?.classList.contains("show") &&
-        !navbarCollapse.contains(target) &&
-        !toggler?.contains(target)
-      ) {
-        navbarCollapse.classList.remove("show");
-      }
-    };
-    document.addEventListener("click", onOutsideClick);
-
-
-    // ── 3. Back to Top ─────────────────────────────────────────────────────
-    const backToTop = document.querySelector<HTMLElement>(".back-to-top");
-
-    const handleBackToTopScroll = () => {
-      if (!backToTop) return;
-      if (window.scrollY > 300) {
-        backToTop.style.display = "flex";
-      } else {
-        backToTop.style.display = "none";
-      }
-    };
-    window.addEventListener("scroll", handleBackToTopScroll);
-
-    const handleBackToTopClick = (e: Event) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    };
-    backToTop?.addEventListener("click", handleBackToTopClick);
-
-
-    // ── 4 & 5. Owl Carousels ───────────────────────────────────────────────
-    // jQuery + owlCarousel load asynchronously via <Script> tags in layout.
-    // Poll until both are available, then initialise.
-    const initCarousels = () => {
-      const $ = (window as any).jQuery;
-      if (!$ || !$.fn?.owlCarousel) return false;
-
+      // ── Testimonial Carousel ─────────────────────────────────────────────
       $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 2000,
@@ -121,8 +69,10 @@ export default function TemplateScript() {
         loop: true,
         margin: 25,
         nav: true,
-        navText: ['<i class="bi bi-arrow-left"></i>', '<i class="bi bi-arrow-right"></i>'],
-        responsiveClass: true,
+        navText: [
+          '<i class="bi bi-arrow-left"></i>',
+          '<i class="bi bi-arrow-right"></i>',
+        ],
         responsive: {
           0: { items: 1 },
           576: { items: 1 },
@@ -132,6 +82,7 @@ export default function TemplateScript() {
         },
       });
 
+      // ── Vegetable Carousel ───────────────────────────────────────────────
       $(".vegetable-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1500,
@@ -140,8 +91,10 @@ export default function TemplateScript() {
         loop: true,
         margin: 25,
         nav: true,
-        navText: ['<i class="bi bi-arrow-left"></i>', '<i class="bi bi-arrow-right"></i>'],
-        responsiveClass: true,
+        navText: [
+          '<i class="bi bi-arrow-left"></i>',
+          '<i class="bi bi-arrow-right"></i>',
+        ],
         responsive: {
           0: { items: 1 },
           576: { items: 1 },
@@ -151,69 +104,47 @@ export default function TemplateScript() {
         },
       });
 
-      return true;
+      // ── Modal Video ──────────────────────────────────────────────────────
+      let videoSrc = "";
+
+      $(".btn-play").click(function () {
+        videoSrc = $(this).data("src");
+      });
+
+      $("#videoModal").on("shown.bs.modal", function () {
+        $("#video").attr(
+          "src",
+          videoSrc + "?autoplay=1&modestbranding=1&showinfo=0"
+        );
+      });
+
+      $("#videoModal").on("hide.bs.modal", function () {
+        $("#video").attr("src", videoSrc);
+      });
+
+      // ── Product Quantity ─────────────────────────────────────────────────
+      $(".quantity button").on("click", function () {
+        const button = $(this);
+        const input = button.closest(".quantity").find("input");
+        let value = Number(input.val());
+        value = button.hasClass("btn-plus")
+          ? value + 1
+          : Math.max(0, value - 1);
+        input.val(value);
+      });
     };
 
-    // Try immediately; if not ready, poll every 100ms (max 50 attempts = 5s)
-    if (!initCarousels()) {
-      let attempts = 0;
-      const interval = setInterval(() => {
-        attempts++;
-        if (initCarousels() || attempts >= 50) clearInterval(interval);
-      }, 100);
-    }
+    // Poll until jQuery + owlCarousel are both ready (loaded via <Script> tags)
+    const timer = setInterval(() => {
+      if (window.jQuery && (window.jQuery.fn as any).owlCarousel) {
+        clearInterval(timer);
+        init();
+      }
+    }, 100);
 
+    init();
 
-    // ── 6. Modal Video ─────────────────────────────────────────────────────
-    let videoSrc = "";
-
-    const playBtns = document.querySelectorAll<HTMLElement>(".btn-play");
-    const onPlayClick = (e: Event) => {
-      videoSrc = (e.currentTarget as HTMLElement).dataset.src ?? "";
-    };
-    playBtns.forEach((btn) => btn.addEventListener("click", onPlayClick));
-
-    const videoModal = document.getElementById("videoModal");
-    const videoEl = document.getElementById("video") as HTMLIFrameElement | null;
-
-    const onModalShow = () => {
-      if (videoEl) videoEl.src = `${videoSrc}?autoplay=1&modestbranding=1&showinfo=0`;
-    };
-    const onModalHide = () => {
-      if (videoEl) videoEl.src = videoSrc;
-    };
-    videoModal?.addEventListener("shown.bs.modal", onModalShow);
-    videoModal?.addEventListener("hide.bs.modal", onModalHide);
-
-
-    // ── 7. Product Quantity ────────────────────────────────────────────────
-    const quantityBtns = document.querySelectorAll<HTMLButtonElement>(".quantity button");
-
-    const onQuantityClick = (e: Event) => {
-      const btn = e.currentTarget as HTMLButtonElement;
-      const inputEl = btn.closest(".quantity")?.querySelector<HTMLInputElement>("input");
-      if (!inputEl) return;
-      const oldVal = parseFloat(inputEl.value) || 0;
-      inputEl.value = String(
-        btn.classList.contains("btn-plus") ? oldVal + 1 : Math.max(0, oldVal - 1)
-      );
-    };
-    quantityBtns.forEach((btn) => btn.addEventListener("click", onQuantityClick));
-
-
-    // ── Cleanup ────────────────────────────────────────────────────────────
-    return () => {
-      window.removeEventListener("scroll", handleNavbarScroll);
-      window.removeEventListener("scroll", handleBackToTopScroll);
-      backToTop?.removeEventListener("click", handleBackToTopClick);
-      playBtns.forEach((btn) => btn.removeEventListener("click", onPlayClick));
-      videoModal?.removeEventListener("shown.bs.modal", onModalShow);
-      videoModal?.removeEventListener("hide.bs.modal", onModalHide);
-      quantityBtns.forEach((btn) => btn.removeEventListener("click", onQuantityClick));
-      window.removeEventListener("resize", applyDesktopState);
-      toggler?.removeEventListener("click", onTogglerClick);
-      document.removeEventListener("click", onOutsideClick);
-    };
+    return () => clearInterval(timer);
   }, []);
 
   return null;
