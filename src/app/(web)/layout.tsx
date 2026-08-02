@@ -73,8 +73,8 @@ export default function WebLayout({ children }: { children: React.ReactNode }) {
       {/* Owl Carousel JS */}
       <Script id="owl-carousel" src="/assets/lib/owlcarousel/owl.carousel.min.js" strategy="afterInteractive" />
       {/* main.js effects via useEffect — no separate script file needed */}
-      {/* <TemplateScript /> */}
-      <PluginReload />
+      <TemplateScript />
+      {/* <PluginReload /> */}
     </>
   );
 }
