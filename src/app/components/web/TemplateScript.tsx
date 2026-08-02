@@ -32,13 +32,13 @@ export default function TemplateScript() {
       // ── Fixed Navbar ─────────────────────────────────────────────────────
       $(window).scroll(function () {
         if ($(window).width() < 992) {
-          if ($(this).scrollTop() > 55) {
+          if ($(window).scrollTop() > 55) {
             $(".fixed-top").addClass("shadow");
           } else {
             $(".fixed-top").removeClass("shadow");
           }
         } else {
-          if ($(this).scrollTop() > 55) {
+          if ($(window).scrollTop() > 55) {
             $(".fixed-top").addClass("shadow").css("top", "-55px");
           } else {
             $(".fixed-top").removeClass("shadow").css("top", "0");
@@ -48,7 +48,7 @@ export default function TemplateScript() {
 
       // ── Back to Top ──────────────────────────────────────────────────────
       $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
+        if ($(window).scrollTop() > 300) {
           $(".back-to-top").fadeIn("slow");
         } else {
           $(".back-to-top").fadeOut("slow");
