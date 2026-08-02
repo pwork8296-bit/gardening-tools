@@ -6,14 +6,13 @@ export default function Banner() {
           {/* Left: Text */}
           <div className="col-lg-6">
             <div className="py-4">
-              <h1 className="display-3 text-white">Fresh Exotic Fruits</h1>
-              <p className="fw-normal display-3 text-dark mb-4">in Our Store</p>
-              <p className="mb-4 text-dark">
-                The generated Lorem Ipsum is therefore always free from repetition injected humour,
-                or non-characteristic words etc.
+              <h1 className="display-3 text-white">Organic Vermicompost</h1>
+              <p className="fw-normal display-4 text-dark mb-4">Nutrient-Rich Soil Fertilizer</p>
+              <p className="mb-4 text-dark fs-5">
+                Give your indoor &amp; flowering plants 100% natural organic nourishment. Guaranteed healthy growth and root strength.
               </p>
-              <a href="#" className="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">
-                BUY
+              <a href="#" className="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5 fw-bold">
+                SHOP NOW
               </a>
             </div>
           </div>
@@ -21,15 +20,14 @@ export default function Banner() {
           {/* Right: Image with price badge */}
           <div className="col-lg-6">
             <div className="position-relative">
-              <img src="/assets/img/baner-1.png" className="img-fluid w-100 rounded" alt="Banner" />
+              <img src="/assets/img/plants/vermicompost.jpg" className="img-fluid w-100 rounded" style={{ maxHeight: "350px", objectFit: "cover" }} alt="Organic Vermicompost" />
               <div
                 className="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute"
-                style={{ width: "140px", height: "140px", top: 0, left: 0 }}
+                style={{ width: "130px", height: "130px", top: 0, left: 0 }}
               >
-                <h1 style={{ fontSize: "100px" }}>1</h1>
-                <div className="d-flex flex-column">
-                  <span className="h2 mb-0">50$</span>
-                  <span className="h4 text-muted mb-0">kg</span>
+                <div className="d-flex flex-column text-center">
+                  <span className="h3 mb-0 fw-bold text-primary">₹99</span>
+                  <span className="h6 text-muted mb-0">1 kg pack</span>
                 </div>
               </div>
             </div>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { siteConfig } from "../../config/site";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -22,11 +23,15 @@ export default function Navbar() {
             <div className="top-info ps-2">
               <small className="me-3">
                 <i className="fas fa-map-marker-alt me-2 text-secondary"></i>
-                <a href="#" className="text-white">123 Street, New York</a>
+                <a href="#" className="text-white">{siteConfig.address}</a>
               </small>
               <small className="me-3">
                 <i className="fas fa-envelope me-2 text-secondary"></i>
-                <a href="#" className="text-white">Email@Example.com</a>
+                <a href={`mailto:${siteConfig.email}`} className="text-white">{siteConfig.email}</a>
+              </small>
+              <small className="me-3">
+                <i className="fas fa-phone-alt me-2 text-secondary"></i>
+                <a href={`tel:${siteConfig.phone1}`} className="text-white">{siteConfig.phone1}</a>
               </small>
             </div>
             <div className="top-link pe-2">
@@ -37,15 +42,16 @@ export default function Navbar() {
                 <small className="text-white mx-2">Terms of Use</small>/
               </a>
               <a href="#" className="text-white">
-                <small className="text-white ms-2">Sales and Refunds</small>
+                <small className="text-white ms-2">Nursery Info</small>
               </a>
             </div>
           </div>
         </div>
         <div className="container px-0">
           <nav className="navbar navbar-light bg-white navbar-expand-xl">
-            <Link href="/" className="navbar-brand">
-              <h1 className="text-primary display-6">Gardening Tools</h1>
+            <Link href="/" className="navbar-brand d-flex align-items-center gap-2">
+              <img src="/assets/img/plants/logo.png" alt={siteConfig.name} style={{ height: "45px" }} />
+              <h1 className="text-primary display-6 mb-0">{siteConfig.name}</h1>
             </Link>
             <button
               className="navbar-toggler py-2 px-3"

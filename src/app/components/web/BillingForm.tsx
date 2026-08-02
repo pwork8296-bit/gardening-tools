@@ -1,11 +1,11 @@
 const billingFields = [
   { label: "Company Name",   type: "text",  placeholder: undefined },
-  { label: "Address",        type: "text",  placeholder: "House Number Street Name" },
-  { label: "Town/City",      type: "text",  placeholder: undefined },
-  { label: "Country",        type: "text",  placeholder: undefined },
-  { label: "Postcode/Zip",   type: "text",  placeholder: undefined },
-  { label: "Mobile",         type: "tel",   placeholder: undefined },
-  { label: "Email Address",  type: "email", placeholder: undefined },
+  { label: "Address",        type: "text",  placeholder: "House / Flat No., Street, Sector / Area" },
+  { label: "Town/City",      type: "text",  placeholder: "Delhi / Noida / Ghaziabad" },
+  { label: "State",          type: "text",  placeholder: "Delhi / Uttar Pradesh" },
+  { label: "Pincode",        type: "text",  placeholder: "110001 / 201301" },
+  { label: "Mobile",         type: "tel",   placeholder: "+91 9876543210" },
+  { label: "Email Address",  type: "email", placeholder: "yourname@gmail.com" },
 ];
 
 export default function BillingForm() {

@@ -1,23 +1,23 @@
 const testimonials = [
   {
-    text: "Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    text: "Ordered a Jade plant and Rama Tulsi for my balcony in Noida. Received super fresh, healthy plants in robust packaging within 24 hours!",
     img: "testimonial-1.jpg",
-    name: "Client Name",
-    profession: "Profession",
-    stars: 4,
-  },
-  {
-    text: "Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    img: "testimonial-1.jpg",
-    name: "Client Name",
-    profession: "Profession",
+    name: "Pooja Sharma",
+    profession: "Home Gardener, Noida",
     stars: 5,
   },
   {
-    text: "Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    text: "PlantNCR is hands down the best online nursery in Delhi NCR. Their vermicompost quality is top-notch and prices are extremely reasonable.",
     img: "testimonial-1.jpg",
-    name: "Client Name",
-    profession: "Profession",
+    name: "Rohan Verma",
+    profession: "Plant Enthusiast, New Delhi",
+    stars: 5,
+  },
+  {
+    text: "Great experience buying air-purifying indoor plants. Dracaena Compacta arrived in pristine condition. Highly recommended nursery!",
+    img: "testimonial-1.jpg",
+    name: "Ananya Gupta",
+    profession: "Interior Decorator, Ghaziabad",
     stars: 5,
   },
 ];

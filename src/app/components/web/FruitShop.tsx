@@ -10,22 +10,22 @@ interface Product {
 }
 
 const products: Product[] = [
-  { img: "fruite-item-5.jpg", category: "Fruits", name: "Grapes",      price: "$4.99 / kg", tab: ["all", "fruits"] },
-  { img: "fruite-item-2.jpg", category: "Fruits", name: "Raspberries", price: "$4.99 / kg", tab: ["all", "meat"] },
-  { img: "fruite-item-3.jpg", category: "Fruits", name: "Banana",      price: "$4.99 / kg", tab: ["all", "meat"] },
-  { img: "fruite-item-4.jpg", category: "Fruits", name: "Apricots",    price: "$4.99 / kg", tab: ["all", "bread"] },
-  { img: "fruite-item-1.jpg", category: "Fruits", name: "Oranges",     price: "$4.99 / kg", tab: ["all", "fruits"] },
-  { img: "fruite-item-6.jpg", category: "Fruits", name: "Apple",       price: "$4.99 / kg", tab: ["all", "fruits"] },
-  { img: "fruite-item-2.jpg", category: "Fruits", name: "Raspberries", price: "$4.99 / kg", tab: ["all", "vegetables"] },
-  { img: "fruite-item-5.jpg", category: "Fruits", name: "Grapes",      price: "$4.99 / kg", tab: ["all", "vegetables"] },
+  { img: "dracaena.jpg", category: "Indoor Plants", name: "Dracaena Compacta Indoor Plant", price: "₹299", tab: ["all", "indoor"] },
+  { img: "elaichi.jpg", category: "Medicinal & Herbs", name: "Elaichi Plant (Cardamom)", price: "₹199", tab: ["all", "medicinal"] },
+  { img: "plant-1.jpg", category: "Medicinal & Herbs", name: "Rama Tulsi Plant in Pot", price: "₹149", tab: ["all", "medicinal"] },
+  { img: "plant-2.jpg", category: "Indoor Plants", name: "Jade Plant (Good Luck)", price: "₹199", tab: ["all", "indoor"] },
+  { img: "vermicompost.jpg", category: "Pots & Soil", name: "1 Kg Organic Vermicompost", price: "₹99", tab: ["all", "pots"] },
+  { img: "plant-3.jpg", category: "Flowering Plants", name: "Hibiscus Plant (Bonsai)", price: "₹249", tab: ["all", "flowering"] },
+  { img: "plant-4.jpg", category: "Indoor Plants", name: "Lucky Bamboo Plant", price: "₹179", tab: ["all", "indoor"] },
+  { img: "plant-5.jpg", category: "Flowering Plants", name: "Cineraria Winter Flower", price: "₹199", tab: ["all", "flowering"] },
 ];
 
 const tabs = [
-  { id: "all",        label: "All Products" },
-  { id: "vegetables", label: "Vegetables"   },
-  { id: "fruits",     label: "Fruits"       },
-  { id: "bread",      label: "Bread"        },
-  { id: "meat",       label: "Meat"         },
+  { id: "all",        label: "All Plants"       },
+  { id: "indoor",     label: "Indoor Plants"    },
+  { id: "flowering",  label: "Flowering Plants" },
+  { id: "medicinal",  label: "Medicinal & Herbs"},
+  { id: "pots",       label: "Pots & Soil"      },
 ];
 
 export default function FruitShop() {
@@ -39,7 +39,7 @@ export default function FruitShop() {
           {/* Header Row */}
           <div className="row g-4">
             <div className="col-lg-4 text-start">
-              <h1>Our Organic Products</h1>
+              <h1>Our Plant Collection</h1>
             </div>
             <div className="col-lg-8 text-end">
               <ul className="nav nav-pills d-inline-flex text-center mb-5">
@@ -70,10 +70,11 @@ export default function FruitShop() {
                 {filtered.map((p, i) => (
                   <div className="col-md-6 col-lg-4 col-xl-3" key={i}>
                     <div className="rounded position-relative fruite-item">
-                      <div className="fruite-img">
+                      <div className="fruite-img" style={{ height: "240px", overflow: "hidden" }}>
                         <img
-                          src={`/assets/img/${p.img}`}
-                          className="img-fluid w-100 rounded-top"
+                          src={`/assets/img/plants/${p.img}`}
+                          className="img-fluid w-100 h-100 rounded-top"
+                          style={{ objectFit: "cover" }}
                           alt={p.name}
                         />
                       </div>
@@ -83,10 +84,10 @@ export default function FruitShop() {
                       >
                         {p.category}
                       </div>
-                      <div className="p-4 border border-secondary border-top-0 rounded-bottom">
+                      <div className="p-4 border border-secondary border-top-0 rounded-bottom text-start">
                         <h4>{p.name}</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                        <div className="d-flex justify-content-between flex-lg-wrap">
+                        <p>Fresh nursery plant carefully grown & delivered in Delhi NCR.</p>
+                        <div className="d-flex justify-content-between flex-lg-wrap align-items-center">
                           <p className="text-dark fs-5 fw-bold mb-0">{p.price}</p>
                           <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary">
                             <i className="fa fa-shopping-bag me-2 text-primary"></i>Add to cart

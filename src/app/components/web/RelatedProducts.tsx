@@ -1,18 +1,16 @@
 const relatedProducts = [
-  { img: "/assets/img/vegetable-item-6.jpg",  name: "Parsely",    price: "$4.99 / kg" },
-  { img: "/assets/img/vegetable-item-1.jpg",  name: "Parsely",    price: "$4.99 / kg" },
-  { img: "/assets/img/vegetable-item-3.png",  name: "Banana",     price: "$7.99 / kg", bgLight: true },
-  { img: "/assets/img/vegetable-item-4.jpg",  name: "Bell Pepper",price: "$7.99 / kg" },
-  { img: "/assets/img/vegetable-item-5.jpg",  name: "Potatoes",   price: "$7.99 / kg" },
-  { img: "/assets/img/vegetable-item-6.jpg",  name: "Parsely",    price: "$7.99 / kg" },
-  { img: "/assets/img/vegetable-item-5.jpg",  name: "Potatoes",   price: "$7.99 / kg" },
-  { img: "/assets/img/vegetable-item-6.jpg",  name: "Parsely",    price: "$7.99 / kg" },
+  { img: "/assets/img/plants/elaichi.jpg", name: "Elaichi Cardamom", category: "Medicinal", price: "₹199" },
+  { img: "/assets/img/plants/plant-1.jpg", name: "Rama Tulsi Plant", category: "Sacred Herb", price: "₹149" },
+  { img: "/assets/img/plants/plant-2.jpg", name: "Jade Plant (Luck)", category: "Succulent", price: "₹199" },
+  { img: "/assets/img/plants/vermicompost.jpg", name: "Organic Vermicompost", category: "Fertilizer", price: "₹99" },
+  { img: "/assets/img/plants/plant-3.jpg", name: "Hibiscus Bonsai", category: "Flowering", price: "₹249" },
+  { img: "/assets/img/plants/plant-4.jpg", name: "Lucky Bamboo", category: "Indoor Plant", price: "₹179" },
 ];
 
 export default function RelatedProducts() {
   return (
     <>
-      <h1 className="fw-bold mb-0">Related products</h1>
+      <h1 className="fw-bold mb-4">Related Plants You May Like</h1>
       <div className="vesitable">
         <div className="owl-carousel vegetable-carousel justify-content-center">
           {relatedProducts.map((p, i) => (
@@ -20,10 +18,11 @@ export default function RelatedProducts() {
               key={i}
               className="border border-primary rounded position-relative vesitable-item"
             >
-              <div className="vesitable-img">
+              <div className="vesitable-img" style={{ height: "200px", overflow: "hidden" }}>
                 <img
                   src={p.img}
-                  className={`img-fluid w-100 rounded-top${p.bgLight ? " bg-light" : ""}`}
+                  className="img-fluid w-100 h-100 rounded-top"
+                  style={{ objectFit: "cover" }}
                   alt={p.name}
                 />
               </div>
@@ -31,16 +30,15 @@ export default function RelatedProducts() {
                 className="text-white bg-primary px-3 py-1 rounded position-absolute"
                 style={{ top: 10, right: 10 }}
               >
-                Vegetable
+                {p.category}
               </div>
-              <div className="p-4 pb-0 rounded-bottom">
+              <div className="p-4 pb-0 rounded-bottom text-start">
                 <h4>{p.name}</h4>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                  eiusmod te incididunt
+                  Fresh nursery plant carefully grown &amp; delivered in Delhi NCR.
                 </p>
-                <div className="d-flex justify-content-between flex-lg-wrap">
-                  <p className="text-dark fs-5 fw-bold">{p.price}</p>
+                <div className="d-flex justify-content-between flex-lg-wrap align-items-center">
+                  <p className="text-dark fs-5 fw-bold mb-4">{p.price}</p>
                   <a
                     href="#"
                     className="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"

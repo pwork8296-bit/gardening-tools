@@ -1,23 +1,23 @@
 const features = [
   {
-    icon: "fas fa-car-side",
-    title: "Free Shipping",
-    desc: "Free on order over $300",
+    icon: "fas fa-truck",
+    title: "Delhi NCR Delivery",
+    desc: "Fast delivery across Noida, Delhi & Ghaziabad",
+  },
+  {
+    icon: "fas fa-seedling",
+    title: "100% Healthy Plants",
+    desc: "Fresh, healthy & vibrant nursery plants",
   },
   {
     icon: "fas fa-user-shield",
-    title: "Security Payment",
-    desc: "100% security payment",
-  },
-  {
-    icon: "fas fa-exchange-alt",
-    title: "30 Day Return",
-    desc: "30 day money guarantee",
+    title: "Secure COD Payment",
+    desc: "Cash on delivery & 100% safe online payment",
   },
   {
     icon: "fa fa-phone-alt",
-    title: "24/7 Support",
-    desc: "Support every time fast",
+    title: "Nursery Advice",
+    desc: "Free gardening guidance from plant experts",
   },
 ];
 

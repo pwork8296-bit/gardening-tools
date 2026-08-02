@@ -1,8 +1,8 @@
 const facts = [
-  { icon: "fa fa-users", label: "Satisfied Customers", value: "1963" },
-  { icon: "fa fa-users", label: "Quality of Service",  value: "99%"  },
-  { icon: "fa fa-users", label: "Quality Certificates", value: "33"  },
-  { icon: "fa fa-users", label: "Available Products",  value: "789"  },
+  { icon: "fa fa-smile", label: "Satisfied Plant Buyers", value: "15,000+" },
+  { icon: "fa fa-seedling", label: "Plant Varieties",  value: "500+"  },
+  { icon: "fa fa-truck", label: "Orders Delivered", value: "25,000+"  },
+  { icon: "fa fa-user-nurse", label: "Nursery Experts",  value: "15+"  },
 ];
 
 export default function Facts() {

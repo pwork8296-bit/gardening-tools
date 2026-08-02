@@ -1,13 +1,13 @@
 const products = [
-  { img: "/assets/img/fruite-item-5.jpg", category: "Fruits", name: "Grapes",      price: "$4.99 / kg" },
-  { img: "/assets/img/fruite-item-5.jpg", category: "Fruits", name: "Grapes",      price: "$4.99 / kg" },
-  { img: "/assets/img/fruite-item-2.jpg", category: "Fruits", name: "Raspberries", price: "$4.99 / kg" },
-  { img: "/assets/img/fruite-item-4.jpg", category: "Fruits", name: "Apricots",    price: "$4.99 / kg" },
-  { img: "/assets/img/fruite-item-3.jpg", category: "Fruits", name: "Banana",      price: "$4.99 / kg" },
-  { img: "/assets/img/fruite-item-1.jpg", category: "Fruits", name: "Oranges",     price: "$4.99 / kg" },
-  { img: "/assets/img/fruite-item-2.jpg", category: "Fruits", name: "Raspberries", price: "$4.99 / kg" },
-  { img: "/assets/img/fruite-item-5.jpg", category: "Fruits", name: "Grapes",      price: "$4.99 / kg" },
-  { img: "/assets/img/fruite-item-1.jpg", category: "Fruits", name: "Oranges",     price: "$4.99 / kg" },
+  { img: "/assets/img/plants/dracaena.jpg", category: "Indoor Plants", name: "Dracaena Compacta Plant", price: "₹299" },
+  { img: "/assets/img/plants/elaichi.jpg", category: "Medicinal & Herbs", name: "Elaichi Plant in Nursery Bag", price: "₹199" },
+  { img: "/assets/img/plants/plant-1.jpg", category: "Medicinal & Herbs", name: "Rama Tulsi Plant in Pot", price: "₹149" },
+  { img: "/assets/img/plants/plant-2.jpg", category: "Indoor Plants", name: "Jade Plant (Good Luck)", price: "₹199" },
+  { img: "/assets/img/plants/vermicompost.jpg", category: "Pots & Soil", name: "1 Kg Organic Vermicompost", price: "₹99" },
+  { img: "/assets/img/plants/plant-3.jpg", category: "Flowering Plants", name: "Hibiscus Plant Bonsai", price: "₹249" },
+  { img: "/assets/img/plants/plant-4.jpg", category: "Indoor Plants", name: "Lucky Bamboo Plant", price: "₹179" },
+  { img: "/assets/img/plants/plant-5.jpg", category: "Flowering Plants", name: "Cineraria Winter Flower", price: "₹199" },
+  { img: "/assets/img/plants/plant-6.jpg", category: "Indoor Plants", name: "Song of India Dracaena", price: "₹279" },
 ];
 
 export default function ShopProducts() {
@@ -18,10 +18,11 @@ export default function ShopProducts() {
         {products.map((product, i) => (
           <div key={i} className="col-md-6 col-lg-6 col-xl-4">
             <div className="rounded position-relative fruite-item">
-              <div className="fruite-img">
+              <div className="fruite-img" style={{ height: "230px", overflow: "hidden" }}>
                 <img
                   src={product.img}
-                  className="img-fluid w-100 rounded-top"
+                  className="img-fluid w-100 h-100 rounded-top"
+                  style={{ objectFit: "cover" }}
                   alt={product.name}
                 />
               </div>
@@ -31,13 +32,12 @@ export default function ShopProducts() {
               >
                 {product.category}
               </div>
-              <div className="p-4 border border-secondary border-top-0 rounded-bottom">
+              <div className="p-4 border border-secondary border-top-0 rounded-bottom text-start">
                 <h4>{product.name}</h4>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                  eiusmod te incididunt
+                  Healthy nursery plant carefully delivered in Delhi NCR.
                 </p>
-                <div className="d-flex justify-content-between flex-lg-wrap">
+                <div className="d-flex justify-content-between flex-lg-wrap align-items-center">
                   <p className="text-dark fs-5 fw-bold mb-0">{product.price}</p>
                   <a
                     href="#"

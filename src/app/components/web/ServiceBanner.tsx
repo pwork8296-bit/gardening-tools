@@ -1,27 +1,27 @@
 const services = [
   {
-    img: "featur-1.jpg",
+    img: "dracaena.jpg",
     bgClass: "bg-secondary",
     contentBg: "bg-primary",
     titleClass: "text-white",
-    title: "Fresh Apples",
+    title: "Air Purifying Plants",
     offer: "20% OFF",
   },
   {
-    img: "featur-2.jpg",
+    img: "vermicompost.jpg",
     bgClass: "bg-dark",
     contentBg: "bg-light",
     titleClass: "text-primary",
-    title: "Tasty Fruits",
-    offer: "Free delivery",
+    title: "Organic Vermicompost",
+    offer: "Special Offer",
   },
   {
-    img: "featur-3.jpg",
+    img: "elaichi.jpg",
     bgClass: "bg-primary",
     contentBg: "bg-secondary",
     titleClass: "text-white",
-    title: "Exotic Vegetable",
-    offer: "Discount 30$",
+    title: "Medicinal Herbs",
+    offer: "Flat ₹50 OFF",
   },
 ];
 
@@ -34,7 +34,7 @@ export default function ServiceBanner() {
             <div className="col-md-6 col-lg-4" key={i}>
               <a href="#">
                 <div className={`service-item ${s.bgClass} rounded border border-${s.bgClass.replace("bg-", "")}`}>
-                  <img src={`/assets/img/${s.img}`} className="img-fluid rounded-top w-100" alt={s.title} />
+                  <img src={`/assets/img/plants/${s.img}`} className="img-fluid rounded-top w-100" style={{ height: "220px", objectFit: "cover" }} alt={s.title} />
                   <div className="px-4 rounded-bottom">
                     <div className={`service-content ${s.contentBg} text-center p-4 rounded`}>
                       <h5 className={s.titleClass}>{s.title}</h5>

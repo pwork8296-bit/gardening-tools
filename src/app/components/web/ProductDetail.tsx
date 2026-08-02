@@ -1,25 +1,25 @@
 const specs = [
-  { label: "Weight", value: "1 kg" },
-  { label: "Country of Origin", value: "Agro Farm" },
-  { label: "Quality", value: "Organic" },
-  { label: "Check", value: "Healthy" },
-  { label: "Min Weight", value: "250 Kg" },
+  { label: "Plant Height", value: "10-14 Inches" },
+  { label: "Pot Size", value: "6 Inch Nursery Pot" },
+  { label: "Sunlight", value: "Indirect Bright Light" },
+  { label: "Watering", value: "When Topsoil Dries" },
+  { label: "Maintenance", value: "Low & Easy Care" },
 ];
 
 const reviews = [
   {
     avatar: "/assets/img/avatar.jpg",
-    date: "April 12, 2024",
+    date: "May 10, 2025",
     name: "Jason Smith",
-    stars: 4,
-    text: "The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc. Susp endisse ultricies nisi vel quam suscipit",
+    stars: 5,
+    text: "Received a healthy Dracaena Compacta plant in perfect condition. Delivered fast in Noida!",
   },
   {
     avatar: "/assets/img/avatar.jpg",
-    date: "April 12, 2024",
-    name: "Sam Peters",
-    stars: 3,
-    text: "The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc. Susp endisse ultricies nisi vel quam suscipit",
+    date: "June 2, 2025",
+    name: "Priya Sharma",
+    stars: 5,
+    text: "Beautiful lush green leaves. Excellent quality indoor plant from PlantNCR nursery.",
   },
 ];
 
@@ -43,12 +43,13 @@ export default function ProductDetail() {
 
         {/* Product Image */}
         <div className="col-lg-6">
-          <div className="border rounded">
+          <div className="border rounded overflow-hidden">
             <a href="#">
               <img
-                src="/assets/img/single-item.jpg"
-                className="img-fluid rounded"
-                alt="Brocoli"
+                src="/assets/img/plants/dracaena.jpg"
+                className="img-fluid rounded w-100"
+                style={{ maxHeight: "400px", objectFit: "cover" }}
+                alt="Dracaena Compacta Indoor Plant"
               />
             </a>
           </div>
@@ -56,19 +57,17 @@ export default function ProductDetail() {
 
         {/* Product Info */}
         <div className="col-lg-6">
-          <h4 className="fw-bold mb-3">Brocoli</h4>
-          <p className="mb-3">Category: Vegetables</p>
-          <h5 className="fw-bold mb-3">3,35 $</h5>
+          <h4 className="fw-bold mb-3">Dracaena Compacta Indoor Plant</h4>
+          <p className="mb-3 text-secondary">Category: Indoor Air Purifying Plants</p>
+          <h5 className="fw-bold mb-3 text-primary">₹299</h5>
           <div className="mb-4">
-            <StarRating filled={4} />
+            <StarRating filled={5} />
           </div>
-          <p className="mb-4">
-            The generated Lorem Ipsum is therefore always free from repetition
-            injected humour, or non-characteristic words etc.
+          <p className="mb-3">
+            Dracaena Compacta is a gorgeous, low-maintenance air-purifying indoor plant with deep green compact foliage. It thrives in indirect sunlight and improves indoor air quality.
           </p>
-          <p className="mb-4">
-            Susp endisse ultricies nisi vel quam suscipit. Sabertooth peacock
-            flounder; chain pickerel hatchetfish, pencilfish snailfish
+          <p className="mb-4 text-muted">
+            Includes healthy plant in a 6-inch polybag/nursery pot. Fast express delivery across Delhi NCR (Delhi, Noida &amp; Ghaziabad).
           </p>
 
           {/* Quantity Stepper */}
@@ -92,7 +91,7 @@ export default function ProductDetail() {
 
           <a
             href="#"
-            className="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"
+            className="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary fw-bold"
           >
             <i className="fa fa-shopping-bag me-2 text-primary" />
             Add to cart
@@ -113,7 +112,7 @@ export default function ProductDetail() {
                 aria-controls="nav-about"
                 aria-selected="true"
               >
-                Description
+                Plant Care &amp; Info
               </button>
               <button
                 className="nav-link border-white border-bottom-0"
@@ -125,7 +124,7 @@ export default function ProductDetail() {
                 aria-controls="nav-mission"
                 aria-selected="false"
               >
-                Reviews
+                Customer Reviews
               </button>
             </div>
           </nav>
@@ -139,19 +138,14 @@ export default function ProductDetail() {
               aria-labelledby="nav-about-tab"
             >
               <p>
-                The generated Lorem Ipsum is therefore always free from
-                repetition injected humour, or non-characteristic words etc.
-                Susp endisse ultricies nisi vel quam suscipit
+                Dracaena Compacta features thick, glossy, dark green leaves tightly clustered on woody stems. It is a slow-growing plant, making it ideal for tabletop displays, living rooms, and office desks.
               </p>
               <p>
-                Sabertooth peacock flounder; chain pickerel hatchetfish,
-                pencilfish snailfish filefish Antarctic icefish goldeye
-                aholehole trumpetfish pilot fish airbreathing catfish, electric
-                ray sweeper.
+                Water only when the top layer of soil feels dry to the touch. Avoid overwatering to keep the root system healthy and vibrant.
               </p>
               <div className="px-2">
                 <div className="row g-4">
-                  <div className="col-6">
+                  <div className="col-lg-8 col-md-10">
                     {specs.map((spec, i) => (
                       <div
                         key={spec.label}
@@ -159,10 +153,10 @@ export default function ProductDetail() {
                           i % 2 === 0 ? " bg-light" : ""
                         }`}
                       >
-                        <div className="col-6">
-                          <p className="mb-0">{spec.label}</p>
+                        <div className="col-6 text-start ps-4">
+                          <p className="mb-0 fw-bold">{spec.label}</p>
                         </div>
-                        <div className="col-6">
+                        <div className="col-6 text-start">
                           <p className="mb-0">{spec.value}</p>
                         </div>
                       </div>
@@ -183,8 +177,8 @@ export default function ProductDetail() {
                 <div className="d-flex mb-3" key={r.name}>
                   <img
                     src={r.avatar}
-                    className="img-fluid rounded-circle p-3"
-                    style={{ width: 100, height: 100 }}
+                    className="img-fluid rounded-circle p-2"
+                    style={{ width: 80, height: 80 }}
                     alt={r.name}
                   />
                   <div>

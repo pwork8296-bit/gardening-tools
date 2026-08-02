@@ -5,7 +5,7 @@ export default function ShopSection() {
   return (
     <div className="container-fluid fruite py-5">
       <div className="container py-5">
-        <h1 className="mb-4">Fresh fruits shop</h1>
+        <h1 className="mb-4">PlantNCR Online Plant Nursery</h1>
         <div className="row g-4">
           <div className="col-lg-12">
 

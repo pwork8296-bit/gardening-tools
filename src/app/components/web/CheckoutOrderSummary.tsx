@@ -1,15 +1,15 @@
 const orderItems = [
-  { img: "/assets/img/vegetable-item-2.jpg", name: "Awesome Brocoli", price: "$69.00", qty: 2, total: "$138.00" },
-  { img: "/assets/img/vegetable-item-5.jpg", name: "Potatoes",        price: "$69.00", qty: 2, total: "$138.00" },
-  { img: "/assets/img/vegetable-item-3.png", name: "Big Banana",      price: "$69.00", qty: 2, total: "$138.00" },
+  { img: "/assets/img/plants/dracaena.jpg", name: "Dracaena Compacta Plant", price: "₹299", qty: 1, total: "₹299" },
+  { img: "/assets/img/plants/plant-1.jpg", name: "Rama Tulsi Plant in Pot", price: "₹149", qty: 1, total: "₹149" },
+  { img: "/assets/img/plants/vermicompost.jpg", name: "1 Kg Organic Vermicompost", price: "₹99", qty: 1, total: "₹99" },
 ];
 
 const paymentMethods = [
-  { id: "Transfer-1", name: "Transfer",  label: "Direct Bank Transfer",
-    description: "Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account." },
-  { id: "Payments-1", name: "Payments", label: "Check Payments" },
-  { id: "Delivery-1", name: "Delivery", label: "Cash On Delivery" },
-  { id: "Paypal-1",   name: "Paypal",   label: "Paypal" },
+  { id: "Transfer-1", name: "Transfer",  label: "UPI / Net Banking / Bank Transfer",
+    description: "Pay conveniently via Google Pay, PhonePe, Paytm, or direct Net Banking across India." },
+  { id: "Delivery-1", name: "Delivery", label: "Cash On Delivery (COD) - Delhi NCR",
+    description: "Pay cash upon delivery of your fresh plants anywhere in Delhi, Noida & Ghaziabad." },
+  { id: "Payments-1", name: "Payments", label: "Debit / Credit Card Payment" },
 ];
 
 export default function CheckoutOrderSummary() {
@@ -24,7 +24,7 @@ export default function CheckoutOrderSummary() {
               <th scope="col">Products</th>
               <th scope="col">Name</th>
               <th scope="col">Price</th>
-              <th scope="col">Quantity</th>
+              <th scope="col">Qty</th>
               <th scope="col">Total</th>
             </tr>
           </thead>
@@ -32,33 +32,33 @@ export default function CheckoutOrderSummary() {
             {orderItems.map((item, i) => (
               <tr key={i}>
                 <th scope="row">
-                  <div className="d-flex align-items-center mt-2">
+                  <div className="d-flex align-items-center mt-2" style={{ width: 60, height: 60, overflow: "hidden" }}>
                     <img
                       src={item.img}
-                      className="img-fluid rounded-circle"
-                      style={{ width: 90, height: 90 }}
+                      className="img-fluid rounded-circle w-100 h-100"
+                      style={{ objectFit: "cover" }}
                       alt={item.name}
                     />
                   </div>
                 </th>
-                <td className="py-5">{item.name}</td>
-                <td className="py-5">{item.price}</td>
-                <td className="py-5">{item.qty}</td>
-                <td className="py-5">{item.total}</td>
+                <td className="py-4">{item.name}</td>
+                <td className="py-4">{item.price}</td>
+                <td className="py-4">{item.qty}</td>
+                <td className="py-4">{item.total}</td>
               </tr>
             ))}
 
             {/* Subtotal row */}
             <tr>
               <th scope="row" />
-              <td className="py-5" />
-              <td className="py-5" />
-              <td className="py-5">
-                <p className="mb-0 text-dark py-3">Subtotal</p>
+              <td className="py-4" />
+              <td className="py-4" />
+              <td className="py-4">
+                <p className="mb-0 text-dark py-2">Subtotal</p>
               </td>
-              <td className="py-5">
-                <div className="py-3 border-bottom border-top">
-                  <p className="mb-0 text-dark">$414.00</p>
+              <td className="py-4">
+                <div className="py-2 border-bottom border-top">
+                  <p className="mb-0 text-dark font-weight-bold">₹547.00</p>
                 </div>
               </td>
             </tr>
@@ -66,14 +66,13 @@ export default function CheckoutOrderSummary() {
             {/* Shipping options row */}
             <tr>
               <th scope="row" />
-              <td className="py-5">
-                <p className="mb-0 text-dark py-4">Shipping</p>
+              <td className="py-4">
+                <p className="mb-0 text-dark py-2">Shipping</p>
               </td>
-              <td colSpan={3} className="py-5">
+              <td colSpan={3} className="py-4">
                 {[
-                  { id: "Shipping-1", label: "Free Shipping" },
-                  { id: "Shipping-2", label: "Flat rate: $15.00" },
-                  { id: "Shipping-3", label: "Local Pickup: $8.00" },
+                  { id: "Shipping-1", label: "Delhi NCR Delivery: ₹49.00" },
+                  { id: "Shipping-2", label: "Free Shipping on Orders > ₹999" },
                 ].map((opt) => (
                   <div className="form-check text-start" key={opt.id}>
                     <input
@@ -94,14 +93,14 @@ export default function CheckoutOrderSummary() {
             {/* Total row */}
             <tr>
               <th scope="row" />
-              <td className="py-5">
-                <p className="mb-0 text-dark text-uppercase py-3">TOTAL</p>
+              <td className="py-4">
+                <p className="mb-0 text-dark text-uppercase py-2 fw-bold">TOTAL</p>
               </td>
-              <td className="py-5" />
-              <td className="py-5" />
-              <td className="py-5">
-                <div className="py-3 border-bottom border-top">
-                  <p className="mb-0 text-dark">$135.00</p>
+              <td className="py-4" />
+              <td className="py-4" />
+              <td className="py-4">
+                <div className="py-2 border-bottom border-top">
+                  <p className="mb-0 text-primary fw-bold fs-5">₹596.00</p>
                 </div>
               </td>
             </tr>

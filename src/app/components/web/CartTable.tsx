@@ -1,21 +1,21 @@
 const cartItems = [
   {
-    img: "/assets/img/vegetable-item-3.png",
-    name: "Big Banana",
-    price: "2.99 $",
-    total: "2.99 $",
+    img: "/assets/img/plants/dracaena.jpg",
+    name: "Dracaena Compacta Indoor Plant",
+    price: "₹299",
+    total: "₹299",
   },
   {
-    img: "/assets/img/vegetable-item-5.jpg",
-    name: "Potatoes",
-    price: "2.99 $",
-    total: "2.99 $",
+    img: "/assets/img/plants/plant-1.jpg",
+    name: "Rama Tulsi Plant in Pot",
+    price: "₹149",
+    total: "₹149",
   },
   {
-    img: "/assets/img/vegetable-item-2.jpg",
-    name: "Awesome Brocoli",
-    price: "2.99 $",
-    total: "2.99 $",
+    img: "/assets/img/plants/vermicompost.jpg",
+    name: "1 Kg Organic Vermicompost",
+    price: "₹99",
+    total: "₹99",
   },
 ];
 

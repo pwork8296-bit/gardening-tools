@@ -1,17 +1,17 @@
 const bestsellerCards = [
-  { img: "best-product-1.jpg", name: "Organic Tomato", price: "3.12 $", stars: 4 },
-  { img: "best-product-2.jpg", name: "Organic Tomato", price: "3.12 $", stars: 4 },
-  { img: "best-product-3.jpg", name: "Organic Tomato", price: "3.12 $", stars: 4 },
-  { img: "best-product-4.jpg", name: "Organic Tomato", price: "3.12 $", stars: 4 },
-  { img: "best-product-5.jpg", name: "Organic Tomato", price: "3.12 $", stars: 4 },
-  { img: "best-product-6.jpg", name: "Organic Tomato", price: "3.12 $", stars: 4 },
+  { img: "dracaena.jpg", name: "Dracaena Compacta", price: "₹299", stars: 5 },
+  { img: "elaichi.jpg", name: "Elaichi Cardamom Plant", price: "₹199", stars: 5 },
+  { img: "plant-1.jpg", name: "Rama Tulsi Sacred Plant", price: "₹149", stars: 5 },
+  { img: "plant-2.jpg", name: "Jade Good Luck Plant", price: "₹199", stars: 5 },
+  { img: "vermicompost.jpg", name: "1 Kg Vermicompost Soil", price: "₹99", stars: 5 },
+  { img: "plant-3.jpg", name: "Hibiscus Bonsai Plant", price: "₹249", stars: 4 },
 ];
 
 const featuredItems = [
-  { img: "fruite-item-1.jpg", name: "Organic Tomato", price: "3.12 $", stars: 4 },
-  { img: "fruite-item-2.jpg", name: "Organic Tomato", price: "3.12 $", stars: 4 },
-  { img: "fruite-item-3.jpg", name: "Organic Tomato", price: "3.12 $", stars: 4 },
-  { img: "fruite-item-4.jpg", name: "Organic Tomato", price: "3.12 $", stars: 4 },
+  { img: "plant-4.jpg", name: "Lucky Bamboo Plant", price: "₹179", stars: 5 },
+  { img: "plant-5.jpg", name: "Cineraria Winter Flower", price: "₹199", stars: 4 },
+  { img: "plant-6.jpg", name: "Song of India Dracaena", price: "₹279", stars: 5 },
+  { img: "plant-7.jpg", name: "Kadhi Patta Curry Leaf", price: "₹119", stars: 5 },
 ];
 
 function StarRating({ count, total = 5 }: { count: number; total?: number }) {
@@ -30,9 +30,9 @@ export default function Bestsellers() {
       <div className="container py-5">
         {/* Section Header */}
         <div className="text-center mx-auto mb-5" style={{ maxWidth: "700px" }}>
-          <h1 className="display-4">Bestseller Products</h1>
-          <p>
-            Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+          <h1 className="display-4">Bestseller Plants</h1>
+          <p className="text-secondary fs-5">
+            Our most loved indoor air-purifying, flowering, and medicinal plants delivered fresh to plant lovers in Delhi NCR.
           </p>
         </div>
 
@@ -43,10 +43,10 @@ export default function Bestsellers() {
               <div className="p-4 rounded bg-light">
                 <div className="row align-items-center">
                   <div className="col-6">
-                    <img src={`/assets/img/${p.img}`} className="img-fluid rounded-circle w-100" alt={p.name} />
+                    <img src={`/assets/img/plants/${p.img}`} className="img-fluid rounded-circle w-100" style={{ height: "130px", objectFit: "cover" }} alt={p.name} />
                   </div>
-                  <div className="col-6">
-                    <a href="#" className="h5">{p.name}</a>
+                  <div className="col-6 text-start">
+                    <a href="#" className="h5 d-block text-truncate">{p.name}</a>
                     <StarRating count={p.stars} />
                     <h4 className="mb-3">{p.price}</h4>
                     <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary">
@@ -61,10 +61,10 @@ export default function Bestsellers() {
           {/* Featured item cards */}
           {featuredItems.map((p, i) => (
             <div className="col-md-6 col-lg-6 col-xl-3" key={`feat-${i}`}>
-              <div className="text-center">
-                <img src={`/assets/img/${p.img}`} className="img-fluid rounded" alt={p.name} />
+              <div className="text-center p-3 rounded bg-light">
+                <img src={`/assets/img/plants/${p.img}`} className="img-fluid rounded w-100" style={{ height: "200px", objectFit: "cover" }} alt={p.name} />
                 <div className="py-4">
-                  <a href="#" className="h5">{p.name}</a>
+                  <a href="#" className="h5 d-block text-truncate">{p.name}</a>
                   <div className="d-flex my-3 justify-content-center">
                     {Array.from({ length: 5 }, (_, j) => (
                       <i key={j} className={`fas fa-star${j < p.stars ? " text-primary" : ""}`}></i>

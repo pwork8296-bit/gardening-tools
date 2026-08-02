@@ -8,9 +8,11 @@ import TemplateScript from "../components/web/TemplateScript";
 import "../web.css";
 import PluginReload from "../components/web/PluginReload";
 
+import { siteConfig } from "../config/site";
+
 export const metadata: Metadata = {
-  title: "Gardening Tools - Fresh Organic Produce",
-  description: "Shop fresh organic vegetables, fruits and gardening tools online.",
+  title: siteConfig.title,
+  description: "Shop fresh indoor & outdoor plants online at PlantNCR. Best nursery in Delhi NCR offering fast delivery in Noida, Delhi & Ghaziabad. Free Delivery and Cash on Delivery.",
 };
 
 export default function WebLayout({ children }: { children: React.ReactNode }) {
