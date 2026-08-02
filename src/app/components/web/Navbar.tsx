@@ -1,11 +1,20 @@
 "use client";
 
+import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "../../config/site";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    setIsNavOpen(false);
+    setIsDropdownOpen(false);
+  }, [pathname]);
 
   const isDropdownActive = [
     "/cart",
@@ -50,18 +59,27 @@ export default function Navbar() {
         <div className="container px-0">
           <nav className="navbar navbar-light bg-white navbar-expand-xl">
             <Link href="/" className="navbar-brand d-flex align-items-center gap-2">
-              <img src="/assets/img/plants/logo.png" alt={siteConfig.name} style={{ height: "45px" }} />
+              <Image
+                src={siteConfig.logo?.src || "/assets/logo.png"}
+                alt={siteConfig.logo?.alt || siteConfig.name || "Logo"}
+                width={siteConfig.logo?.width || 45}
+                height={siteConfig.logo?.height || 45}
+                priority
+                style={{ height: "45px", width: "auto" }}
+              />
               <h1 className="text-primary display-6 mb-0">{siteConfig.name}</h1>
             </Link>
             <button
               className="navbar-toggler py-2 px-3"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarCollapse"
+              onClick={() => setIsNavOpen((prev) => !prev)}
+              aria-controls="navbarCollapse"
+              aria-expanded={isNavOpen}
+              aria-label="Toggle navigation"
             >
               <span className="fa fa-bars text-primary"></span>
             </button>
-            <div className="navbar-collapse bg-white" id="navbarCollapse">
+            <div className={`navbar-collapse bg-white ${isNavOpen ? "show" : "collapse"}`} id="navbarCollapse">
               <div className="navbar-nav mx-auto">
                 <Link
                   href="/"
@@ -81,15 +99,19 @@ export default function Navbar() {
                 >
                   Shop Detail
                 </Link>
-                <div className="nav-item dropdown">
+                <div className={`nav-item dropdown ${isDropdownOpen ? "show" : ""}`}>
                   <a
                     href="#"
                     className={`nav-link dropdown-toggle${isDropdownActive ? " active" : ""}`}
-                    data-bs-toggle="dropdown"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsDropdownOpen((prev) => !prev);
+                    }}
+                    aria-expanded={isDropdownOpen}
                   >
                     Pages
                   </a>
-                  <div className="dropdown-menu m-0 bg-secondary rounded-0">
+                  <div className={`dropdown-menu m-0 bg-secondary rounded-0 ${isDropdownOpen ? "show" : ""}`}>
                     <Link
                       href="/cart"
                       className={`dropdown-item${pathname === "/cart" ? " active" : ""}`}

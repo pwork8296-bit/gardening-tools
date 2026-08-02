@@ -13,6 +13,11 @@ import { siteConfig } from "../config/site";
 export const metadata: Metadata = {
   title: siteConfig.title,
   description: "Shop fresh indoor & outdoor plants online at PlantNCR. Best nursery in Delhi NCR offering fast delivery in Noida, Delhi & Ghaziabad. Free Delivery and Cash on Delivery.",
+  icons: {
+    icon: siteConfig.favicon,
+    shortcut: siteConfig.favicon,
+    apple: siteConfig.favicon,
+  },
 };
 
 export default function WebLayout({ children }: { children: React.ReactNode }) {

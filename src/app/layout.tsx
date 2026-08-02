@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
+import { siteConfig } from "./config/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Gardening Tools",
-  description: "Gardening Tools",
+  title: siteConfig.title,
+  description: "PlantNCR - Online Plant Nursery in Delhi NCR",
+  icons: {
+    icon: siteConfig.favicon,
+    shortcut: siteConfig.favicon,
+    apple: siteConfig.favicon,
+  },
 };
 
 export default function RootLayout({
