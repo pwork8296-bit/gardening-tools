@@ -6,6 +6,7 @@ import Footer from "../components/web/Footer";
 import TemplateScript from "../components/web/TemplateScript";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "../web.css";
+import PluginReload from "../components/web/PluginReload";
 
 export const metadata: Metadata = {
   title: "Gardening Tools - Fresh Organic Produce",
@@ -72,8 +73,8 @@ export default function WebLayout({ children }: { children: React.ReactNode }) {
       {/* Owl Carousel JS */}
       <Script id="owl-carousel" src="/assets/lib/owlcarousel/owl.carousel.min.js" strategy="afterInteractive" />
       {/* main.js effects via useEffect — no separate script file needed */}
-      <TemplateScript />
-      {/* <Script id="main-js" src="/js/main.js" strategy="afterInteractive" /> */}
+      {/* <TemplateScript /> */}
+      <PluginReload />
     </>
   );
 }

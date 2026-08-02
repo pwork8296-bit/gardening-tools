@@ -142,9 +142,8 @@ export default function TemplateScript() {
       }
     }, 100);
 
-    init();
-
     return () => clearInterval(timer);
+
   }, []);
 
   return null;
