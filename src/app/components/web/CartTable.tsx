@@ -1,21 +1,21 @@
 const cartItems = [
   {
-    img: "/assets/img/agttools/IMG_20210220_173942_670-1.jpg",
-    name: "108-Piece Professional Socket Tool Set",
-    price: "₹4,500.00",
-    total: "₹4,500.00",
-  },
-  {
     img: "/assets/img/agttools/3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp",
     name: "AGT 3-Piece Gardening Tool Set",
     price: "₹800.00",
     total: "₹800.00",
   },
   {
-    img: "/assets/img/agttools/ChatGPTImageJan9_2026_05_24_30PM.png",
-    name: "AGT Car Washing Spray Gun Nozzle",
-    price: "₹599.00",
-    total: "₹599.00",
+    img: "/assets/img/agttools/WhatsAppImage2025-12-05at18.45.12.jpg",
+    name: "AGT Garden 3 Cutter Tool Set",
+    price: "₹1,349.00",
+    total: "₹1,349.00",
+  },
+  {
+    img: "/assets/img/agttools/03_9bad78c5-c6a4-4aa0-af94-6b2f456da850.jpg",
+    name: "AGT 5 Litre Green Watering Can",
+    price: "₹359.00",
+    total: "₹359.00",
   },
 ];
 

@@ -1,13 +1,13 @@
 const products = [
-  { img: "/assets/img/agttools/IMG_20210220_173942_670-1.jpg", category: "Socket Sets", name: "108-Piece Socket & Ratchet Tool Set", price: "₹4,500.00" },
-  { img: "/assets/img/agttools/srunv-set-of-32-pcs-heavy-duty-vanadium-metal-smart-32-wallvilla-original-imah3ujbzsvp6zza.webp", category: "Socket Sets", name: "32-Piece Heavy Duty Socket Set", price: "₹1,724.00" },
-  { img: "/assets/img/agttools/3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp", category: "Tool Kits", name: "AGT 3-Piece Gardening Tool Set", price: "₹800.00" },
-  { img: "/assets/img/agttools/ChatGPTImageJan9_2026_05_24_30PM.png", category: "Spray Guns", name: "AGT Car Washing Spray Gun Nozzle", price: "₹599.00" },
-  { img: "/assets/img/agttools/WhatsAppImage2025-12-04at11.05.43.jpg", category: "Cutters & Pruners", name: "AGT Folding Hand Saw Pruner", price: "₹420.00" },
-  { img: "/assets/img/agttools/WhatsAppImage2025-12-05at18.45.12.jpg", category: "Cutters & Pruners", name: "AGT Garden 3 Cutter Tool Set", price: "₹1,349.00" },
-  { img: "/assets/img/agttools/WhatsAppImage2025-12-04at12.54.20.jpg", category: "Tool Kits", name: "AGT Pruning Scissor & Gloves Combo", price: "₹550.00" },
-  { img: "/assets/img/agttools/WhatsAppImage2026-01-09at12.23.54.jpg", category: "Spray Guns", name: "AGT Heavy Duty Brass Water Spray Gun", price: "₹499.50" },
-  { img: "/assets/img/agttools/ChatGPTImageJan9_2026_02_47_46PM_a2acc59d-a2a5-4991-9780-e7ebca023020.png", category: "Cutters & Pruners", name: "AGT Heavy Duty Gardening Axe 400g", price: "₹799.00" },
+  { img: "/assets/img/agttools/3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp", category: "Garden Tool Kits", name: "AGT 3-Piece Gardening Tool Set", price: "₹800.00" },
+  { img: "/assets/img/agttools/WhatsAppImage2025-12-05at18.45.12.jpg", category: "Pruners & Cutters", name: "AGT Garden 3 Cutter Tool Set", price: "₹1,349.00" },
+  { img: "/assets/img/agttools/WhatsAppImage2025-12-04at12.54.20.jpg", category: "Garden Tool Kits", name: "AGT Pruning Scissor & Gloves Combo", price: "₹550.00" },
+  { img: "/assets/img/agttools/WhatsAppImage2025-12-04at11.05.43.jpg", category: "Pruners & Cutters", name: "AGT Folding Hand Saw Pruner", price: "₹420.00" },
+  { img: "/assets/img/agttools/41bBiubDuCL._SL1080.jpg", category: "Pruners & Cutters", name: "AGT Heavy Duty Hedge Shears 29 Inch", price: "₹999.00" },
+  { img: "/assets/img/agttools/03_9bad78c5-c6a4-4aa0-af94-6b2f456da850.jpg", category: "Watering Cans", name: "AGT 5 Litre Green Watering Can", price: "₹359.00" },
+  { img: "/assets/img/agttools/1_26e58c45-6f41-4b67-a829-b6e4805ecd63.png", category: "Hand Tools", name: "AGT 5-Piece Garden Tool Set", price: "₹820.00" },
+  { img: "/assets/img/agttools/1_b8dde6dc-821f-429f-a29d-e415145aa249.jpg", category: "Hand Tools", name: "AGT Garden Agriculture Khurpi", price: "₹299.00" },
+  { img: "/assets/img/agttools/ChatGPTImageJan9_2026_02_47_46PM_a2acc59d-a2a5-4991-9780-e7ebca023020.png", category: "Cutters & Axes", name: "AGT Heavy Duty Gardening Axe 400g", price: "₹799.00" },
 ];
 
 export default function ShopProducts() {
@@ -35,7 +35,7 @@ export default function ShopProducts() {
               <div className="p-4 border border-secondary border-top-0 rounded-bottom text-start">
                 <h4 className="text-truncate" title={product.name}>{product.name}</h4>
                 <p className="text-truncate">
-                  Durable high-grade alloy steel garden &amp; workshop tool.
+                  Durable high-grade alloy steel gardening &amp; landscaping tool.
                 </p>
                 <div className="d-flex justify-content-between flex-lg-wrap align-items-center">
                   <p className="text-dark fs-5 fw-bold mb-0">{product.price}</p>

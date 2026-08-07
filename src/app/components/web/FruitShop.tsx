@@ -10,26 +10,26 @@ interface Product {
 }
 
 const products: Product[] = [
-  { img: "IMG_20210220_173942_670-1.jpg", category: "Socket Sets", name: "108-Piece Professional Socket & Ratchet Tool Set", price: "₹4,500.00", tab: ["all", "sockets"] },
-  { img: "srunv-set-of-32-pcs-heavy-duty-vanadium-metal-smart-32-wallvilla-original-imah3ujbzsvp6zza.webp", category: "Socket Sets", name: "32-Piece Heavy Duty Socket & Ratchet Wrench Set", price: "₹1,724.00", tab: ["all", "sockets"] },
-  { img: "3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp", category: "Tool Kits", name: "AGT 3-Piece Gardening Tool Set with Pruner & Saw", price: "₹800.00", tab: ["all", "kits"] },
-  { img: "ChatGPTImageJan9_2026_05_24_30PM.png", category: "Spray Guns", name: "AGT Car Washing Gun Adjustable Spray Nozzle", price: "₹599.00", tab: ["all", "spray"] },
-  { img: "WhatsAppImage2025-12-04at11.05.43.jpg", category: "Cutters & Pruners", name: "AGT Folding Hand Saw Pruner Tree Branch Cutter", price: "₹420.00", tab: ["all", "cutters"] },
+  { img: "3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp", category: "Garden Tool Kits", name: "AGT 3-Piece Gardening Tool Set with Pruner & Saw", price: "₹800.00", tab: ["all", "kits"] },
   { img: "WhatsAppImage2025-12-05at18.45.12.jpg", category: "Cutters & Pruners", name: "AGT Garden 3 Cutter Tool Set | Plant Pruning Scissor", price: "₹1,349.00", tab: ["all", "cutters"] },
-  { img: "WhatsAppImage2025-12-04at12.54.20.jpg", category: "Tool Kits", name: "AGT Garden Tool Kit | Heavy-Duty Pruning Scissor & Gloves", price: "₹550.00", tab: ["all", "kits"] },
-  { img: "WhatsAppImage2026-01-09at12.23.54.jpg", category: "Spray Guns", name: "AGT Heavy Duty Brass Water Spray Gun for Car & Garden", price: "₹499.50", tab: ["all", "spray"] },
-  { img: "ChatGPTImageJan9_2026_02_47_46PM_a2acc59d-a2a5-4991-9780-e7ebca023020.png", category: "Cutters & Pruners", name: "AGT Heavy Duty Gardening Axe 400g – Fibreglass Handle", price: "₹799.00", tab: ["all", "cutters"] },
+  { img: "WhatsAppImage2025-12-04at12.54.20.jpg", category: "Garden Tool Kits", name: "AGT Garden Tool Kit | Heavy-Duty Pruning Scissor & Gloves", price: "₹550.00", tab: ["all", "kits"] },
+  { img: "WhatsAppImage2025-12-04at11.05.43.jpg", category: "Cutters & Pruners", name: "AGT Folding Hand Saw Pruner Tree Branch Cutter", price: "₹420.00", tab: ["all", "cutters"] },
   { img: "41bBiubDuCL._SL1080.jpg", category: "Cutters & Pruners", name: "AGT Heavy Duty Hedge Shears 29 Inch for Garden Trimming", price: "₹999.00", tab: ["all", "cutters"] },
-  { img: "03_9bad78c5-c6a4-4aa0-af94-6b2f456da850.jpg", category: "Watering Cans", name: "AGT® 5 Litre Green Plastic Long Spout Watering Can", price: "₹359.00", tab: ["all", "spray"] },
-  { img: "01_13c53828-22eb-42a8-b023-fff4c95e8c00.jpg", category: "Tool Kits", name: "AGT® Gardening Tool Combo – Pruning Shear & Hand Weeder", price: "₹620.00", tab: ["all", "kits"] },
+  { img: "03_9bad78c5-c6a4-4aa0-af94-6b2f456da850.jpg", category: "Watering Cans", name: "AGT® 5 Litre Green Plastic Long Spout Watering Can", price: "₹359.00", tab: ["all", "watering"] },
+  { img: "01_13c53828-22eb-42a8-b023-fff4c95e8c00.jpg", category: "Garden Tool Kits", name: "AGT® Gardening Tool Combo – Pruning Shear & Hand Weeder", price: "₹620.00", tab: ["all", "kits"] },
+  { img: "1_26e58c45-6f41-4b67-a829-b6e4805ecd63.png", category: "Hand Tools", name: "AGT® Garden Tool Set - 5 Tools (Weeder, Shovel, Cultivator)", price: "₹820.00", tab: ["all", "hand"] },
+  { img: "1_b8dde6dc-821f-429f-a29d-e415145aa249.jpg", category: "Hand Tools", name: "AGT® Garden Khurpi Agriculture Tool", price: "₹299.00", tab: ["all", "hand"] },
+  { img: "1_719e74bf-70de-4a93-bdb1-171aacb84775.jpg", category: "Hand Tools", name: "AGT® Garden Tool Set - Cultivator, Garden Fork, Trowel", price: "₹499.00", tab: ["all", "hand"] },
+  { img: "WhatsAppImage2026-01-09at12.23.54.jpg", category: "Watering Cans", name: "AGT Heavy Duty Brass Water Spray Gun for Garden", price: "₹499.50", tab: ["all", "watering"] },
+  { img: "ChatGPTImageJan9_2026_02_47_46PM_a2acc59d-a2a5-4991-9780-e7ebca023020.png", category: "Cutters & Pruners", name: "AGT Heavy Duty Gardening Axe 400g – Fibreglass Handle", price: "₹799.00", tab: ["all", "cutters"] },
 ];
 
 const tabs = [
-  { id: "all",     label: "All Tools" },
-  { id: "kits",    label: "Tool Kits" },
-  { id: "cutters", label: "Cutters & Pruners" },
-  { id: "spray",   label: "Spray Guns & Cans" },
-  { id: "sockets", label: "Socket Wrench Sets" },
+  { id: "all",      label: "All Garden Tools" },
+  { id: "kits",     label: "Tool Kits"        },
+  { id: "cutters",  label: "Pruners & Cutters"},
+  { id: "hand",     label: "Khurpi & Trowels" },
+  { id: "watering", label: "Watering & Spray" },
 ];
 
 export default function FruitShop() {
@@ -43,7 +43,7 @@ export default function FruitShop() {
           {/* Header Row */}
           <div className="row g-4">
             <div className="col-lg-4 text-start">
-              <h1>Our Tool Collection</h1>
+              <h1>Gardening Tools Collection</h1>
             </div>
             <div className="col-lg-8 text-end">
               <ul className="nav nav-pills d-inline-flex text-center mb-5">
@@ -57,7 +57,7 @@ export default function FruitShop() {
                         setActiveTab(t.id);
                       }}
                     >
-                      <span className={activeTab === t.id ? "text-white" : "text-dark"} style={{ width: "140px" }}>
+                      <span className={activeTab === t.id ? "text-white" : "text-dark"} style={{ width: "150px" }}>
                         {t.label}
                       </span>
                     </a>
@@ -90,7 +90,7 @@ export default function FruitShop() {
                       </div>
                       <div className="p-4 border border-secondary border-top-0 rounded-bottom text-start">
                         <h4 className="text-truncate" title={p.name}>{p.name}</h4>
-                        <p className="text-truncate">Durable high-grade alloy steel construction for home &amp; professional use.</p>
+                        <p className="text-truncate">Durable alloy steel construction for home gardening &amp; landscaping.</p>
                         <div className="d-flex justify-content-between flex-lg-wrap align-items-center">
                           <p className="text-dark fs-5 fw-bold mb-0">{p.price}</p>
                           <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary">

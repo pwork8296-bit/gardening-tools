@@ -1,15 +1,15 @@
 const categories = [
-  { label: "Tool Kits & Combos", count: 28 },
-  { label: "Cutters & Pruners", count: 20 },
-  { label: "Water Spray Guns", count: 12 },
-  { label: "Socket & Wrench Sets", count: 10 },
-  { label: "Watering Cans & Hose", count: 8 },
+  { label: "Garden Tool Kits & Sets", count: 28 },
+  { label: "Pruners, Shears & Cutters", count: 20 },
+  { label: "Garden Khurpis & Trowels", count: 15 },
+  { label: "Watering Cans & Sprayers", count: 12 },
+  { label: "Weeders & Hand Rakes", count: 10 },
 ];
 
 const featuredProducts = [
-  { img: "/assets/img/agttools/IMG_20210220_173942_670-1.jpg", name: "108-Piece Socket Tool Set", price: "₹4,500.00", oldPrice: "₹5,200.00", stars: 5 },
   { img: "/assets/img/agttools/3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp", name: "AGT 3-Piece Tool Set", price: "₹800.00", oldPrice: "₹999.00", stars: 5 },
-  { img: "/assets/img/agttools/ChatGPTImageJan9_2026_05_24_30PM.png", name: "AGT Car Washing Spray Gun", price: "₹599.00", oldPrice: "₹750.00", stars: 5 },
+  { img: "/assets/img/agttools/WhatsAppImage2025-12-05at18.45.12.jpg", name: "AGT Garden 3 Cutter Set", price: "₹1,349.00", oldPrice: "₹1,500.00", stars: 5 },
+  { img: "/assets/img/agttools/03_9bad78c5-c6a4-4aa0-af94-6b2f456da850.jpg", name: "AGT 5L Green Watering Can", price: "₹359.00", oldPrice: "₹450.00", stars: 5 },
 ];
 
 function StarRating({ filled }: { filled: number }) {
@@ -33,7 +33,7 @@ export default function ShopSidebar() {
         {/* Categories */}
         <div className="col-lg-12">
           <div className="mb-3">
-            <h4>Tool Categories</h4>
+            <h4>Garden Tool Categories</h4>
             <ul className="list-unstyled fruite-categorie">
               {categories.map((cat) => (
                 <li key={cat.label}>
@@ -60,18 +60,18 @@ export default function ShopSidebar() {
               id="rangeInput"
               name="rangeInput"
               min={100}
-              max={5000}
-              defaultValue={1000}
+              max={3000}
+              defaultValue={800}
             />
-            <output id="amount" htmlFor="rangeInput">₹1,000</output>
+            <output id="amount" htmlFor="rangeInput">₹800</output>
           </div>
         </div>
 
         {/* Additional Filters */}
         <div className="col-lg-12">
           <div className="mb-3">
-            <h4>Tool Specification</h4>
-            {["Heavy Duty Alloy Steel", "Ergonomic Rubber Grip", "Rust-Resistant Coating", "High-Pressure Brass", "Folding & Compact"].map(
+            <h4>Garden Tool Features</h4>
+            {["High-Grade Carbon Steel", "Ergonomic Anti-Slip Grip", "Rust-Resistant Blade Coating", "Multi-Tool Combos", "Lightweight & Portable"].map(
               (label, i) => (
                 <div className="mb-2" key={label}>
                   <input
@@ -90,7 +90,7 @@ export default function ShopSidebar() {
 
         {/* Featured Products */}
         <div className="col-lg-12">
-          <h4 className="mb-3">Featured Tools</h4>
+          <h4 className="mb-3">Featured Garden Tools</h4>
           {featuredProducts.map((p, i) => (
             <div
               key={i}
@@ -121,7 +121,7 @@ export default function ShopSidebar() {
               href="#"
               className="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100"
             >
-              View All Tools
+              View All Garden Tools
             </a>
           </div>
         </div>

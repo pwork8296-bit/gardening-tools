@@ -1,15 +1,15 @@
 const bestsellerCards = [
-  { img: "IMG_20210220_173942_670-1.jpg", name: "108-Piece Professional Socket Set", price: "₹4,500.00", stars: 5 },
-  { img: "srunv-set-of-32-pcs-heavy-duty-vanadium-metal-smart-32-wallvilla-original-imah3ujbzsvp6zza.webp", name: "32-Piece Socket Wrench Set", price: "₹1,724.00", stars: 5 },
   { img: "3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp", name: "AGT 3-Piece Gardening Tool Set", price: "₹800.00", stars: 5 },
-  { img: "ChatGPTImageJan9_2026_05_24_30PM.png", name: "AGT Car Washing Spray Gun", price: "₹599.00", stars: 5 },
+  { img: "WhatsAppImage2025-12-05at18.45.12.jpg", name: "AGT Garden 3 Cutter Tool Set", price: "₹1,349.00", stars: 5 },
+  { img: "WhatsAppImage2025-12-04at12.54.20.jpg", name: "AGT Pruning Scissor & Gloves Kit", price: "₹550.00", stars: 5 },
   { img: "WhatsAppImage2025-12-04at11.05.43.jpg", name: "AGT Folding Hand Saw Pruner", price: "₹420.00", stars: 5 },
+  { img: "41bBiubDuCL._SL1080.jpg", name: "AGT Heavy Duty Hedge Shears", price: "₹999.00", stars: 5 },
   { img: "03_9bad78c5-c6a4-4aa0-af94-6b2f456da850.jpg", name: "AGT 5L Green Watering Can", price: "₹359.00", stars: 5 },
 ];
 
 const featuredItems = [
-  { img: "WhatsAppImage2025-12-05at18.45.12.jpg", name: "AGT Garden 3 Cutter Set", price: "₹1,349.00", stars: 5 },
-  { img: "WhatsAppImage2025-12-04at12.54.20.jpg", name: "AGT Pruning Scissor & Gloves", price: "₹550.00", stars: 5 },
+  { img: "1_26e58c45-6f41-4b67-a829-b6e4805ecd63.png", name: "AGT 5-Piece Garden Tool Set", price: "₹820.00", stars: 5 },
+  { img: "1_b8dde6dc-821f-429f-a29d-e415145aa249.jpg", name: "AGT Agriculture Khurpi Tool", price: "₹299.00", stars: 5 },
   { img: "WhatsAppImage2026-01-09at12.23.54.jpg", name: "AGT Brass Water Spray Gun", price: "₹499.50", stars: 5 },
   { img: "ChatGPTImageJan9_2026_02_47_46PM_a2acc59d-a2a5-4991-9780-e7ebca023020.png", name: "AGT Heavy Duty Gardening Axe", price: "₹799.00", stars: 5 },
 ];
@@ -30,9 +30,9 @@ export default function Bestsellers() {
       <div className="container py-5">
         {/* Section Header */}
         <div className="text-center mx-auto mb-5" style={{ maxWidth: "700px" }}>
-          <h1 className="display-4">Bestseller Tools &amp; Kits</h1>
+          <h1 className="display-4">Bestseller Gardening Tools</h1>
           <p className="text-secondary fs-5">
-            Our most popular heavy-duty socket sets, pruning shears, water spray guns, and garden tool combos.
+            Our most popular hand pruners, garden cutters, khurpis, trowel sets, and watering tools delivered to your doorstep.
           </p>
         </div>
 

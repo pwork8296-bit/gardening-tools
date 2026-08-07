@@ -1,14 +1,14 @@
 const orderItems = [
-  { img: "/assets/img/agttools/IMG_20210220_173942_670-1.jpg", name: "108-Piece Socket Tool Set", price: "₹4,500.00", qty: 1, total: "₹4,500.00" },
   { img: "/assets/img/agttools/3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp", name: "AGT 3-Piece Gardening Tool Set", price: "₹800.00", qty: 1, total: "₹800.00" },
-  { img: "/assets/img/agttools/ChatGPTImageJan9_2026_05_24_30PM.png", name: "AGT Car Washing Spray Gun", price: "₹599.00", qty: 1, total: "₹599.00" },
+  { img: "/assets/img/agttools/WhatsAppImage2025-12-05at18.45.12.jpg", name: "AGT Garden 3 Cutter Tool Set", price: "₹1,349.00", qty: 1, total: "₹1,349.00" },
+  { img: "/assets/img/agttools/03_9bad78c5-c6a4-4aa0-af94-6b2f456da850.jpg", name: "AGT 5 Litre Green Watering Can", price: "₹359.00", qty: 1, total: "₹359.00" },
 ];
 
 const paymentMethods = [
   { id: "Transfer-1", name: "Transfer",  label: "UPI / Net Banking / Bank Transfer",
     description: "Pay conveniently via Google Pay, PhonePe, Paytm, or direct Net Banking across India." },
   { id: "Delivery-1", name: "Delivery", label: "Cash On Delivery (COD)",
-    description: "Pay cash upon delivery of your tools anywhere in India." },
+    description: "Pay cash upon delivery of your gardening tools anywhere in India." },
   { id: "Payments-1", name: "Payments", label: "Debit / Credit Card Payment" },
 ];
 
@@ -58,7 +58,7 @@ export default function CheckoutOrderSummary() {
               </td>
               <td className="py-4">
                 <div className="py-2 border-bottom border-top">
-                  <p className="mb-0 text-dark font-weight-bold">₹5,899.00</p>
+                  <p className="mb-0 text-dark font-weight-bold">₹2,508.00</p>
                 </div>
               </td>
             </tr>
@@ -72,7 +72,7 @@ export default function CheckoutOrderSummary() {
               <td colSpan={3} className="py-4">
                 {[
                   { id: "Shipping-1", label: "Standard Shipping: Free" },
-                  { id: "Shipping-2", label: "Express Express Courier: ₹99.00" },
+                  { id: "Shipping-2", label: "Express Courier: ₹99.00" },
                 ].map((opt) => (
                   <div className="form-check text-start" key={opt.id}>
                     <input
@@ -100,7 +100,7 @@ export default function CheckoutOrderSummary() {
               <td className="py-4" />
               <td className="py-4">
                 <div className="py-2 border-bottom border-top">
-                  <p className="mb-0 text-primary fw-bold fs-5">₹5,899.00</p>
+                  <p className="mb-0 text-primary fw-bold fs-5">₹2,508.00</p>
                 </div>
               </td>
             </tr>

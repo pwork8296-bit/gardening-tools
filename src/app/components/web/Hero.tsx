@@ -7,13 +7,13 @@ export default function Hero() {
         <div className="row g-5 align-items-center">
           {/* Left: Heading & Search */}
           <div className="col-md-12 col-lg-7">
-            <h4 className="mb-3 text-secondary">High Quality Gardening &amp; Power Tools</h4>
-            <h1 className="mb-5 display-3 text-primary">Heavy-Duty Gardening &amp; Hand Tools Delivered</h1>
+            <h4 className="mb-3 text-secondary">High Quality Gardening Tools &amp; Equipment</h4>
+            <h1 className="mb-5 display-3 text-primary">Heavy-Duty Gardening Tools &amp; Pruners Delivered</h1>
             <div className="position-relative mx-auto">
               <input
                 className="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill"
                 type="text"
-                placeholder="Search Socket Set, Pruner Scissor, Water Spray Gun, Saw..."
+                placeholder="Search Garden Khurpi, Pruning Shears, Trowel Set, Watering Can..."
               />
               <button
                 type="submit"
@@ -34,27 +34,27 @@ export default function Hero() {
                     src="/assets/img/agttools/3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp"
                     className="img-fluid w-100 h-100 bg-secondary rounded"
                     style={{ height: "350px", objectFit: "cover" }}
-                    alt="AGT 3-Piece Tool Set"
+                    alt="AGT 3-Piece Gardening Tool Set"
                   />
                   <a href="#" className="btn px-4 py-2 text-white rounded">Garden Tool Sets</a>
                 </div>
                 <div className="carousel-item rounded">
                   <img
-                    src="/assets/img/agttools/IMG_20210220_173942_670-1.jpg"
+                    src="/assets/img/agttools/WhatsAppImage2025-12-05at18.45.12.jpg"
                     className="img-fluid w-100 h-100 rounded"
                     style={{ height: "350px", objectFit: "cover" }}
-                    alt="108-Piece Professional Socket Set"
+                    alt="AGT Garden 3 Cutter Set"
                   />
-                  <a href="#" className="btn px-4 py-2 text-white rounded">Socket Wrench Sets</a>
+                  <a href="#" className="btn px-4 py-2 text-white rounded">Pruners &amp; Cutters</a>
                 </div>
                 <div className="carousel-item rounded">
                   <img
-                    src="/assets/img/agttools/ChatGPTImageJan9_2026_05_24_30PM.png"
+                    src="/assets/img/agttools/03_9bad78c5-c6a4-4aa0-af94-6b2f456da850.jpg"
                     className="img-fluid w-100 h-100 rounded"
                     style={{ height: "350px", objectFit: "cover" }}
-                    alt="AGT Car Wash Spray Gun"
+                    alt="AGT 5L Green Watering Can"
                   />
-                  <a href="#" className="btn px-4 py-2 text-white rounded">Water Spray Guns</a>
+                  <a href="#" className="btn px-4 py-2 text-white rounded">Watering Cans &amp; Hose</a>
                 </div>
               </div>
               <button
