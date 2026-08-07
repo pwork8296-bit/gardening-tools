@@ -1,14 +1,14 @@
 const orderItems = [
-  { img: "/assets/img/plants/dracaena.jpg", name: "Dracaena Compacta Plant", price: "₹299", qty: 1, total: "₹299" },
-  { img: "/assets/img/plants/plant-1.jpg", name: "Rama Tulsi Plant in Pot", price: "₹149", qty: 1, total: "₹149" },
-  { img: "/assets/img/plants/vermicompost.jpg", name: "1 Kg Organic Vermicompost", price: "₹99", qty: 1, total: "₹99" },
+  { img: "/assets/img/agttools/IMG_20210220_173942_670-1.jpg", name: "108-Piece Socket Tool Set", price: "₹4,500.00", qty: 1, total: "₹4,500.00" },
+  { img: "/assets/img/agttools/3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp", name: "AGT 3-Piece Gardening Tool Set", price: "₹800.00", qty: 1, total: "₹800.00" },
+  { img: "/assets/img/agttools/ChatGPTImageJan9_2026_05_24_30PM.png", name: "AGT Car Washing Spray Gun", price: "₹599.00", qty: 1, total: "₹599.00" },
 ];
 
 const paymentMethods = [
   { id: "Transfer-1", name: "Transfer",  label: "UPI / Net Banking / Bank Transfer",
     description: "Pay conveniently via Google Pay, PhonePe, Paytm, or direct Net Banking across India." },
-  { id: "Delivery-1", name: "Delivery", label: "Cash On Delivery (COD) - Delhi NCR",
-    description: "Pay cash upon delivery of your fresh plants anywhere in Delhi, Noida & Ghaziabad." },
+  { id: "Delivery-1", name: "Delivery", label: "Cash On Delivery (COD)",
+    description: "Pay cash upon delivery of your tools anywhere in India." },
   { id: "Payments-1", name: "Payments", label: "Debit / Credit Card Payment" },
 ];
 
@@ -58,7 +58,7 @@ export default function CheckoutOrderSummary() {
               </td>
               <td className="py-4">
                 <div className="py-2 border-bottom border-top">
-                  <p className="mb-0 text-dark font-weight-bold">₹547.00</p>
+                  <p className="mb-0 text-dark font-weight-bold">₹5,899.00</p>
                 </div>
               </td>
             </tr>
@@ -71,8 +71,8 @@ export default function CheckoutOrderSummary() {
               </td>
               <td colSpan={3} className="py-4">
                 {[
-                  { id: "Shipping-1", label: "Delhi NCR Delivery: ₹49.00" },
-                  { id: "Shipping-2", label: "Free Shipping on Orders > ₹999" },
+                  { id: "Shipping-1", label: "Standard Shipping: Free" },
+                  { id: "Shipping-2", label: "Express Express Courier: ₹99.00" },
                 ].map((opt) => (
                   <div className="form-check text-start" key={opt.id}>
                     <input
@@ -100,7 +100,7 @@ export default function CheckoutOrderSummary() {
               <td className="py-4" />
               <td className="py-4">
                 <div className="py-2 border-bottom border-top">
-                  <p className="mb-0 text-primary fw-bold fs-5">₹596.00</p>
+                  <p className="mb-0 text-primary fw-bold fs-5">₹5,899.00</p>
                 </div>
               </td>
             </tr>

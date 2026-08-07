@@ -12,7 +12,7 @@ export default function Footer() {
               <div className="col-lg-3">
                 <a href="#">
                   <h1 className="text-primary mb-0">{siteConfig.name}</h1>
-                  <p className="text-secondary mb-0">Online Plant Nursery</p>
+                  <p className="text-secondary mb-0">High Quality Gardening Tools</p>
                 </a>
               </div>
               <div className="col-lg-6">
@@ -20,7 +20,7 @@ export default function Footer() {
                   <input
                     className="form-control border-0 w-100 py-3 px-4 rounded-pill"
                     type="email"
-                    placeholder="Enter your Email for Plant Tips"
+                    placeholder="Enter your Email for Tool Offers"
                   />
                   <button
                     type="submit"
@@ -33,7 +33,7 @@ export default function Footer() {
               </div>
               <div className="col-lg-3">
                 <div className="d-flex justify-content-end pt-3">
-                  <a className="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="https://youtube.com/@plantncr2025" target="_blank" rel="noreferrer">
+                  <a className="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="#" target="_blank" rel="noreferrer">
                     <i className="fab fa-youtube"></i>
                   </a>
                   <a className="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="#">
@@ -54,17 +54,17 @@ export default function Footer() {
           <div className="row g-5">
             <div className="col-lg-3 col-md-6">
               <div className="footer-item">
-                <h4 className="text-light mb-3">Why Choose PlantNCR?</h4>
+                <h4 className="text-light mb-3">Why Choose Us?</h4>
                 <p className="mb-4">
-                  PlantNCR brings you healthy, freshly nurtured indoor, outdoor, flowering, and medicinal plants with fast delivery across Noida, Delhi &amp; Ghaziabad.
+                  We supply high-performance, durable alloy steel gardening tools, socket wrench sets, pruning shears, and water spray guns with fast shipping across India.
                 </p>
-                <a href="/shop" className="btn border-secondary py-2 px-4 rounded-pill text-primary">Explore Nursery</a>
+                <a href="/shop" className="btn border-secondary py-2 px-4 rounded-pill text-primary">Explore Tools</a>
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
               <div className="d-flex flex-column text-start footer-item">
-                <h4 className="text-light mb-3">Nursery Categories</h4>
-                {["Indoor Plants", "Flowering Plants", "Medicinal & Herbs", "Succulents & Cactus", "Pots & Planters", "Organic Vermicompost"].map((l) => (
+                <h4 className="text-light mb-3">Tool Categories</h4>
+                {["Tool Kits & Combos", "Cutters & Pruners", "Water Spray Guns", "Socket & Wrench Sets", "Watering Cans & Hose", "Gardening Accessories"].map((l) => (
                   <a key={l} className="btn-link" href="/shop">{l}</a>
                 ))}
               </div>
@@ -72,14 +72,14 @@ export default function Footer() {
             <div className="col-lg-3 col-md-6">
               <div className="d-flex flex-column text-start footer-item">
                 <h4 className="text-light mb-3">Quick Links</h4>
-                {["About Us", "Contact Us", "Privacy Policy", "Terms of Service", "Plant Care Guide", "Delivery Areas"].map((l) => (
+                {["About Us", "Contact Us", "Privacy Policy", "Terms of Service", "Tool Guide", "Shipping Policy"].map((l) => (
                   <a key={l} className="btn-link" href="#">{l}</a>
                 ))}
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
               <div className="footer-item">
-                <h4 className="text-light mb-3">Contact Nursery</h4>
+                <h4 className="text-light mb-3">Contact Us</h4>
                 <p><i className="fas fa-map-marker-alt text-primary me-2"></i>{siteConfig.address}</p>
                 <p><i className="fas fa-envelope text-primary me-2"></i>{siteConfig.email}</p>
                 <p><i className="fas fa-phone-alt text-primary me-2"></i>{siteConfig.phone1}</p>
@@ -101,11 +101,11 @@ export default function Footer() {
                 <a href="#">
                   <i className="fas fa-copyright text-light me-2"></i>{siteConfig.name}
                 </a>
-                , All rights reserved. Delivered in Delhi NCR.
+                , All rights reserved.
               </span>
             </div>
             <div className="col-md-6 my-auto text-center text-md-end text-white">
-              Online Plant Nursery &amp; Gardening Supplies
+              High Quality Gardening Tools &amp; Power Equipment
             </div>
           </div>
         </div>

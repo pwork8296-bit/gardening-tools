@@ -1,23 +1,23 @@
 const features = [
   {
     icon: "fas fa-truck",
-    title: "Delhi NCR Delivery",
-    desc: "Fast delivery across Noida, Delhi & Ghaziabad",
+    title: "Fast Shipping Across India",
+    desc: "Quick delivery to home & workshops",
   },
   {
-    icon: "fas fa-seedling",
-    title: "100% Healthy Plants",
-    desc: "Fresh, healthy & vibrant nursery plants",
+    icon: "fas fa-tools",
+    title: "100% Alloy Steel Tools",
+    desc: "Heavy-duty, rust-resistant, durable build",
   },
   {
     icon: "fas fa-user-shield",
-    title: "Secure COD Payment",
-    desc: "Cash on delivery & 100% safe online payment",
+    title: "Secure Payment Options",
+    desc: "COD & 100% safe online payment modes",
   },
   {
     icon: "fa fa-phone-alt",
-    title: "Nursery Advice",
-    desc: "Free gardening guidance from plant experts",
+    title: "Expert Customer Support",
+    desc: "Support & guidance for tool selection",
   },
 ];
 

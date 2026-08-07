@@ -1,17 +1,17 @@
 const bestsellerCards = [
-  { img: "dracaena.jpg", name: "Dracaena Compacta", price: "₹299", stars: 5 },
-  { img: "elaichi.jpg", name: "Elaichi Cardamom Plant", price: "₹199", stars: 5 },
-  { img: "plant-1.jpg", name: "Rama Tulsi Sacred Plant", price: "₹149", stars: 5 },
-  { img: "plant-2.jpg", name: "Jade Good Luck Plant", price: "₹199", stars: 5 },
-  { img: "vermicompost.jpg", name: "1 Kg Vermicompost Soil", price: "₹99", stars: 5 },
-  { img: "plant-3.jpg", name: "Hibiscus Bonsai Plant", price: "₹249", stars: 4 },
+  { img: "IMG_20210220_173942_670-1.jpg", name: "108-Piece Professional Socket Set", price: "₹4,500.00", stars: 5 },
+  { img: "srunv-set-of-32-pcs-heavy-duty-vanadium-metal-smart-32-wallvilla-original-imah3ujbzsvp6zza.webp", name: "32-Piece Socket Wrench Set", price: "₹1,724.00", stars: 5 },
+  { img: "3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp", name: "AGT 3-Piece Gardening Tool Set", price: "₹800.00", stars: 5 },
+  { img: "ChatGPTImageJan9_2026_05_24_30PM.png", name: "AGT Car Washing Spray Gun", price: "₹599.00", stars: 5 },
+  { img: "WhatsAppImage2025-12-04at11.05.43.jpg", name: "AGT Folding Hand Saw Pruner", price: "₹420.00", stars: 5 },
+  { img: "03_9bad78c5-c6a4-4aa0-af94-6b2f456da850.jpg", name: "AGT 5L Green Watering Can", price: "₹359.00", stars: 5 },
 ];
 
 const featuredItems = [
-  { img: "plant-4.jpg", name: "Lucky Bamboo Plant", price: "₹179", stars: 5 },
-  { img: "plant-5.jpg", name: "Cineraria Winter Flower", price: "₹199", stars: 4 },
-  { img: "plant-6.jpg", name: "Song of India Dracaena", price: "₹279", stars: 5 },
-  { img: "plant-7.jpg", name: "Kadhi Patta Curry Leaf", price: "₹119", stars: 5 },
+  { img: "WhatsAppImage2025-12-05at18.45.12.jpg", name: "AGT Garden 3 Cutter Set", price: "₹1,349.00", stars: 5 },
+  { img: "WhatsAppImage2025-12-04at12.54.20.jpg", name: "AGT Pruning Scissor & Gloves", price: "₹550.00", stars: 5 },
+  { img: "WhatsAppImage2026-01-09at12.23.54.jpg", name: "AGT Brass Water Spray Gun", price: "₹499.50", stars: 5 },
+  { img: "ChatGPTImageJan9_2026_02_47_46PM_a2acc59d-a2a5-4991-9780-e7ebca023020.png", name: "AGT Heavy Duty Gardening Axe", price: "₹799.00", stars: 5 },
 ];
 
 function StarRating({ count, total = 5 }: { count: number; total?: number }) {
@@ -30,9 +30,9 @@ export default function Bestsellers() {
       <div className="container py-5">
         {/* Section Header */}
         <div className="text-center mx-auto mb-5" style={{ maxWidth: "700px" }}>
-          <h1 className="display-4">Bestseller Plants</h1>
+          <h1 className="display-4">Bestseller Tools &amp; Kits</h1>
           <p className="text-secondary fs-5">
-            Our most loved indoor air-purifying, flowering, and medicinal plants delivered fresh to plant lovers in Delhi NCR.
+            Our most popular heavy-duty socket sets, pruning shears, water spray guns, and garden tool combos.
           </p>
         </div>
 
@@ -43,10 +43,10 @@ export default function Bestsellers() {
               <div className="p-4 rounded bg-light">
                 <div className="row align-items-center">
                   <div className="col-6">
-                    <img src={`/assets/img/plants/${p.img}`} className="img-fluid rounded-circle w-100" style={{ height: "130px", objectFit: "cover" }} alt={p.name} />
+                    <img src={`/assets/img/agttools/${p.img}`} className="img-fluid rounded-circle w-100" style={{ height: "130px", objectFit: "cover" }} alt={p.name} />
                   </div>
                   <div className="col-6 text-start">
-                    <a href="#" className="h5 d-block text-truncate">{p.name}</a>
+                    <a href="#" className="h5 d-block text-truncate" title={p.name}>{p.name}</a>
                     <StarRating count={p.stars} />
                     <h4 className="mb-3">{p.price}</h4>
                     <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary">
@@ -62,9 +62,9 @@ export default function Bestsellers() {
           {featuredItems.map((p, i) => (
             <div className="col-md-6 col-lg-6 col-xl-3" key={`feat-${i}`}>
               <div className="text-center p-3 rounded bg-light">
-                <img src={`/assets/img/plants/${p.img}`} className="img-fluid rounded w-100" style={{ height: "200px", objectFit: "cover" }} alt={p.name} />
+                <img src={`/assets/img/agttools/${p.img}`} className="img-fluid rounded w-100" style={{ height: "200px", objectFit: "cover" }} alt={p.name} />
                 <div className="py-4">
-                  <a href="#" className="h5 d-block text-truncate">{p.name}</a>
+                  <a href="#" className="h5 d-block text-truncate" title={p.name}>{p.name}</a>
                   <div className="d-flex my-3 justify-content-center">
                     {Array.from({ length: 5 }, (_, j) => (
                       <i key={j} className={`fas fa-star${j < p.stars ? " text-primary" : ""}`}></i>

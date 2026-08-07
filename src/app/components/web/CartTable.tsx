@@ -1,21 +1,21 @@
 const cartItems = [
   {
-    img: "/assets/img/plants/dracaena.jpg",
-    name: "Dracaena Compacta Indoor Plant",
-    price: "₹299",
-    total: "₹299",
+    img: "/assets/img/agttools/IMG_20210220_173942_670-1.jpg",
+    name: "108-Piece Professional Socket Tool Set",
+    price: "₹4,500.00",
+    total: "₹4,500.00",
   },
   {
-    img: "/assets/img/plants/plant-1.jpg",
-    name: "Rama Tulsi Plant in Pot",
-    price: "₹149",
-    total: "₹149",
+    img: "/assets/img/agttools/3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp",
+    name: "AGT 3-Piece Gardening Tool Set",
+    price: "₹800.00",
+    total: "₹800.00",
   },
   {
-    img: "/assets/img/plants/vermicompost.jpg",
-    name: "1 Kg Organic Vermicompost",
-    price: "₹99",
-    total: "₹99",
+    img: "/assets/img/agttools/ChatGPTImageJan9_2026_05_24_30PM.png",
+    name: "AGT Car Washing Spray Gun Nozzle",
+    price: "₹599.00",
+    total: "₹599.00",
   },
 ];
 
@@ -65,7 +65,7 @@ export default function CartTable() {
                     <img
                       src={item.img}
                       className="img-fluid me-5 rounded-circle"
-                      style={{ width: 80, height: 80 }}
+                      style={{ width: 80, height: 80, objectFit: "cover" }}
                       alt={item.name}
                     />
                   </div>

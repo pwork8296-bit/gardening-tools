@@ -1,8 +1,8 @@
 const facts = [
-  { icon: "fa fa-smile", label: "Satisfied Plant Buyers", value: "15,000+" },
-  { icon: "fa fa-seedling", label: "Plant Varieties",  value: "500+"  },
-  { icon: "fa fa-truck", label: "Orders Delivered", value: "25,000+"  },
-  { icon: "fa fa-user-nurse", label: "Nursery Experts",  value: "15+"  },
+  { icon: "fa fa-smile", label: "Satisfied Customers", value: "25,000+" },
+  { icon: "fa fa-wrench", label: "Tool Models & Kits",  value: "100+"  },
+  { icon: "fa fa-truck", label: "Orders Delivered", value: "50,000+"  },
+  { icon: "fa fa-shield-alt", label: "Quality Guarantee",  value: "100%"  },
 ];
 
 export default function Facts() {

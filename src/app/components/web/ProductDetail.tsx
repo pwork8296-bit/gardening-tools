@@ -1,9 +1,9 @@
 const specs = [
-  { label: "Plant Height", value: "10-14 Inches" },
-  { label: "Pot Size", value: "6 Inch Nursery Pot" },
-  { label: "Sunlight", value: "Indirect Bright Light" },
-  { label: "Watering", value: "When Topsoil Dries" },
-  { label: "Maintenance", value: "Low & Easy Care" },
+  { label: "Material", value: "High-Grade Alloy Steel & Chrome Vanadium" },
+  { label: "Components Included", value: "Bypass Pruner + Harvest Scissors + Folding Saw" },
+  { label: "Blade Finish", value: "Rust-Resistant Non-Stick Coating" },
+  { label: "Handle Type", value: "Ergonomic Anti-Slip Grip Handle" },
+  { label: "Application", value: "Tree Pruning, Gardening, Harvesting, Branch Cutting" },
 ];
 
 const reviews = [
@@ -12,14 +12,14 @@ const reviews = [
     date: "May 10, 2025",
     name: "Jason Smith",
     stars: 5,
-    text: "Received a healthy Dracaena Compacta plant in perfect condition. Delivered fast in Noida!",
+    text: "Received the AGT 3-piece gardening tool set in perfect condition. Extremely sharp blades and solid build!",
   },
   {
     avatar: "/assets/img/avatar.jpg",
     date: "June 2, 2025",
     name: "Priya Sharma",
     stars: 5,
-    text: "Beautiful lush green leaves. Excellent quality indoor plant from PlantNCR nursery.",
+    text: "High quality steel and comfortable handles. Essential tool kit for home gardening and pruning.",
   },
 ];
 
@@ -46,10 +46,10 @@ export default function ProductDetail() {
           <div className="border rounded overflow-hidden">
             <a href="#">
               <img
-                src="/assets/img/plants/dracaena.jpg"
+                src="/assets/img/agttools/3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp"
                 className="img-fluid rounded w-100"
                 style={{ maxHeight: "400px", objectFit: "cover" }}
-                alt="Dracaena Compacta Indoor Plant"
+                alt="AGT 3-Piece Gardening Tool Set"
               />
             </a>
           </div>
@@ -57,17 +57,17 @@ export default function ProductDetail() {
 
         {/* Product Info */}
         <div className="col-lg-6">
-          <h4 className="fw-bold mb-3">Dracaena Compacta Indoor Plant</h4>
-          <p className="mb-3 text-secondary">Category: Indoor Air Purifying Plants</p>
-          <h5 className="fw-bold mb-3 text-primary">₹299</h5>
+          <h4 className="fw-bold mb-3">AGT 3-Piece Gardening Tool Set with Pruner, Harvest Scissors &amp; Folding Saw</h4>
+          <p className="mb-3 text-secondary">Category: Gardening Tool Kits</p>
+          <h5 className="fw-bold mb-3 text-primary">₹800.00</h5>
           <div className="mb-4">
             <StarRating filled={5} />
           </div>
           <p className="mb-3">
-            Dracaena Compacta is a gorgeous, low-maintenance air-purifying indoor plant with deep green compact foliage. It thrives in indirect sunlight and improves indoor air quality.
+            AGT 3-Piece Gardening Tool Set includes a heavy-duty bypass pruner, lightweight harvest scissors, and a folding carbon steel hand saw. Engineered for precision cutting, branch pruning, and long-lasting durability.
           </p>
           <p className="mb-4 text-muted">
-            Includes healthy plant in a 6-inch polybag/nursery pot. Fast express delivery across Delhi NCR (Delhi, Noida &amp; Ghaziabad).
+            Includes 3 essential gardening tools with ergonomic anti-slip handles. Fast express shipping across India.
           </p>
 
           {/* Quantity Stepper */}
@@ -112,7 +112,7 @@ export default function ProductDetail() {
                 aria-controls="nav-about"
                 aria-selected="true"
               >
-                Plant Care &amp; Info
+                Tool Specifications &amp; Details
               </button>
               <button
                 className="nav-link border-white border-bottom-0"
@@ -138,10 +138,10 @@ export default function ProductDetail() {
               aria-labelledby="nav-about-tab"
             >
               <p>
-                Dracaena Compacta features thick, glossy, dark green leaves tightly clustered on woody stems. It is a slow-growing plant, making it ideal for tabletop displays, living rooms, and office desks.
+                The AGT 3-Piece Gardening Tool Set is crafted from high-grade alloy steel treated for rust resistance and high strength. Featuring ultra-sharp bypass pruning blades and a compact folding saw for thick wood branches.
               </p>
               <p>
-                Water only when the top layer of soil feels dry to the touch. Avoid overwatering to keep the root system healthy and vibrant.
+                Designed with ergonomic handles to reduce hand fatigue during extended gardening, landscaping, and farming tasks.
               </p>
               <div className="px-2">
                 <div className="row g-4">

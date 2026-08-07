@@ -1,27 +1,27 @@
 const services = [
   {
-    img: "dracaena.jpg",
+    img: "3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp",
     bgClass: "bg-secondary",
     contentBg: "bg-primary",
     titleClass: "text-white",
-    title: "Air Purifying Plants",
-    offer: "20% OFF",
+    title: "Gardening Tool Kits",
+    offer: "Special Combo Deals",
   },
   {
-    img: "vermicompost.jpg",
+    img: "ChatGPTImageJan9_2026_05_24_30PM.png",
     bgClass: "bg-dark",
     contentBg: "bg-light",
     titleClass: "text-primary",
-    title: "Organic Vermicompost",
-    offer: "Special Offer",
+    title: "Car Wash Spray Guns",
+    offer: "Up to 30% OFF",
   },
   {
-    img: "elaichi.jpg",
+    img: "41bBiubDuCL._SL1080.jpg",
     bgClass: "bg-primary",
     contentBg: "bg-secondary",
     titleClass: "text-white",
-    title: "Medicinal Herbs",
-    offer: "Flat ₹50 OFF",
+    title: "Hedge Shears & Cutters",
+    offer: "Flat ₹200 OFF",
   },
 ];
 
@@ -34,7 +34,7 @@ export default function ServiceBanner() {
             <div className="col-md-6 col-lg-4" key={i}>
               <a href="#">
                 <div className={`service-item ${s.bgClass} rounded border border-${s.bgClass.replace("bg-", "")}`}>
-                  <img src={`/assets/img/plants/${s.img}`} className="img-fluid rounded-top w-100" style={{ height: "220px", objectFit: "cover" }} alt={s.title} />
+                  <img src={`/assets/img/agttools/${s.img}`} className="img-fluid rounded-top w-100" style={{ height: "220px", objectFit: "cover" }} alt={s.title} />
                   <div className="px-4 rounded-bottom">
                     <div className={`service-content ${s.contentBg} text-center p-4 rounded`}>
                       <h5 className={s.titleClass}>{s.title}</h5>

@@ -1,13 +1,13 @@
 const products = [
-  { img: "/assets/img/plants/dracaena.jpg", category: "Indoor Plants", name: "Dracaena Compacta Plant", price: "₹299" },
-  { img: "/assets/img/plants/elaichi.jpg", category: "Medicinal & Herbs", name: "Elaichi Plant in Nursery Bag", price: "₹199" },
-  { img: "/assets/img/plants/plant-1.jpg", category: "Medicinal & Herbs", name: "Rama Tulsi Plant in Pot", price: "₹149" },
-  { img: "/assets/img/plants/plant-2.jpg", category: "Indoor Plants", name: "Jade Plant (Good Luck)", price: "₹199" },
-  { img: "/assets/img/plants/vermicompost.jpg", category: "Pots & Soil", name: "1 Kg Organic Vermicompost", price: "₹99" },
-  { img: "/assets/img/plants/plant-3.jpg", category: "Flowering Plants", name: "Hibiscus Plant Bonsai", price: "₹249" },
-  { img: "/assets/img/plants/plant-4.jpg", category: "Indoor Plants", name: "Lucky Bamboo Plant", price: "₹179" },
-  { img: "/assets/img/plants/plant-5.jpg", category: "Flowering Plants", name: "Cineraria Winter Flower", price: "₹199" },
-  { img: "/assets/img/plants/plant-6.jpg", category: "Indoor Plants", name: "Song of India Dracaena", price: "₹279" },
+  { img: "/assets/img/agttools/IMG_20210220_173942_670-1.jpg", category: "Socket Sets", name: "108-Piece Socket & Ratchet Tool Set", price: "₹4,500.00" },
+  { img: "/assets/img/agttools/srunv-set-of-32-pcs-heavy-duty-vanadium-metal-smart-32-wallvilla-original-imah3ujbzsvp6zza.webp", category: "Socket Sets", name: "32-Piece Heavy Duty Socket Set", price: "₹1,724.00" },
+  { img: "/assets/img/agttools/3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp", category: "Tool Kits", name: "AGT 3-Piece Gardening Tool Set", price: "₹800.00" },
+  { img: "/assets/img/agttools/ChatGPTImageJan9_2026_05_24_30PM.png", category: "Spray Guns", name: "AGT Car Washing Spray Gun Nozzle", price: "₹599.00" },
+  { img: "/assets/img/agttools/WhatsAppImage2025-12-04at11.05.43.jpg", category: "Cutters & Pruners", name: "AGT Folding Hand Saw Pruner", price: "₹420.00" },
+  { img: "/assets/img/agttools/WhatsAppImage2025-12-05at18.45.12.jpg", category: "Cutters & Pruners", name: "AGT Garden 3 Cutter Tool Set", price: "₹1,349.00" },
+  { img: "/assets/img/agttools/WhatsAppImage2025-12-04at12.54.20.jpg", category: "Tool Kits", name: "AGT Pruning Scissor & Gloves Combo", price: "₹550.00" },
+  { img: "/assets/img/agttools/WhatsAppImage2026-01-09at12.23.54.jpg", category: "Spray Guns", name: "AGT Heavy Duty Brass Water Spray Gun", price: "₹499.50" },
+  { img: "/assets/img/agttools/ChatGPTImageJan9_2026_02_47_46PM_a2acc59d-a2a5-4991-9780-e7ebca023020.png", category: "Cutters & Pruners", name: "AGT Heavy Duty Gardening Axe 400g", price: "₹799.00" },
 ];
 
 export default function ShopProducts() {
@@ -33,9 +33,9 @@ export default function ShopProducts() {
                 {product.category}
               </div>
               <div className="p-4 border border-secondary border-top-0 rounded-bottom text-start">
-                <h4>{product.name}</h4>
-                <p>
-                  Healthy nursery plant carefully delivered in Delhi NCR.
+                <h4 className="text-truncate" title={product.name}>{product.name}</h4>
+                <p className="text-truncate">
+                  Durable high-grade alloy steel garden &amp; workshop tool.
                 </p>
                 <div className="d-flex justify-content-between flex-lg-wrap align-items-center">
                   <p className="text-dark fs-5 fw-bold mb-0">{product.price}</p>

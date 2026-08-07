@@ -7,13 +7,13 @@ export default function Hero() {
         <div className="row g-5 align-items-center">
           {/* Left: Heading & Search */}
           <div className="col-md-12 col-lg-7">
-            <h4 className="mb-3 text-secondary">Best Online Plant Nursery in Delhi NCR</h4>
-            <h1 className="mb-5 display-3 text-primary">Fresh Indoor &amp; Outdoor Plants Delivered</h1>
+            <h4 className="mb-3 text-secondary">High Quality Gardening &amp; Power Tools</h4>
+            <h1 className="mb-5 display-3 text-primary">Heavy-Duty Gardening &amp; Hand Tools Delivered</h1>
             <div className="position-relative mx-auto">
               <input
                 className="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill"
                 type="text"
-                placeholder="Search Tulsi, Jade, Indoor Plants, Vermicompost..."
+                placeholder="Search Socket Set, Pruner Scissor, Water Spray Gun, Saw..."
               />
               <button
                 type="submit"
@@ -31,27 +31,30 @@ export default function Hero() {
               <div className="carousel-inner" role="listbox">
                 <div className="carousel-item active rounded">
                   <img
-                    src="/assets/img/plants/hero-banner-1.png"
+                    src="/assets/img/agttools/3pcs-gardening-scissors-pruner-and-mini-folding-hand-saw-alloy-steel-construction-b0fkbf9534-1000x1000.webp"
                     className="img-fluid w-100 h-100 bg-secondary rounded"
-                    alt="Fresh Plants Delivery"
+                    style={{ height: "350px", objectFit: "cover" }}
+                    alt="AGT 3-Piece Tool Set"
                   />
-                  <a href="#" className="btn px-4 py-2 text-white rounded">Fresh Plants</a>
+                  <a href="#" className="btn px-4 py-2 text-white rounded">Garden Tool Sets</a>
                 </div>
                 <div className="carousel-item rounded">
                   <img
-                    src="/assets/img/plants/hero-banner-2.png"
+                    src="/assets/img/agttools/IMG_20210220_173942_670-1.jpg"
                     className="img-fluid w-100 h-100 rounded"
-                    alt="Indoor Air Purifiers"
+                    style={{ height: "350px", objectFit: "cover" }}
+                    alt="108-Piece Professional Socket Set"
                   />
-                  <a href="#" className="btn px-4 py-2 text-white rounded">Indoor Plants</a>
+                  <a href="#" className="btn px-4 py-2 text-white rounded">Socket Wrench Sets</a>
                 </div>
                 <div className="carousel-item rounded">
                   <img
-                    src="/assets/img/plants/hero-banner-3.png"
+                    src="/assets/img/agttools/ChatGPTImageJan9_2026_05_24_30PM.png"
                     className="img-fluid w-100 h-100 rounded"
-                    alt="Flowering & Fertilizer"
+                    style={{ height: "350px", objectFit: "cover" }}
+                    alt="AGT Car Wash Spray Gun"
                   />
-                  <a href="#" className="btn px-4 py-2 text-white rounded">Flowering Plants</a>
+                  <a href="#" className="btn px-4 py-2 text-white rounded">Water Spray Guns</a>
                 </div>
               </div>
               <button

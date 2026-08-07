@@ -1,16 +1,16 @@
 const relatedProducts = [
-  { img: "/assets/img/plants/elaichi.jpg", name: "Elaichi Cardamom", category: "Medicinal", price: "₹199" },
-  { img: "/assets/img/plants/plant-1.jpg", name: "Rama Tulsi Plant", category: "Sacred Herb", price: "₹149" },
-  { img: "/assets/img/plants/plant-2.jpg", name: "Jade Plant (Luck)", category: "Succulent", price: "₹199" },
-  { img: "/assets/img/plants/vermicompost.jpg", name: "Organic Vermicompost", category: "Fertilizer", price: "₹99" },
-  { img: "/assets/img/plants/plant-3.jpg", name: "Hibiscus Bonsai", category: "Flowering", price: "₹249" },
-  { img: "/assets/img/plants/plant-4.jpg", name: "Lucky Bamboo", category: "Indoor Plant", price: "₹179" },
+  { img: "/assets/img/agttools/WhatsAppImage2025-12-05at18.45.12.jpg", name: "AGT Garden 3 Cutter Set", category: "Cutters", price: "₹1,349.00" },
+  { img: "/assets/img/agttools/WhatsAppImage2025-12-04at12.54.20.jpg", name: "AGT Pruning Scissor & Gloves", category: "Tool Kit", price: "₹550.00" },
+  { img: "/assets/img/agttools/WhatsAppImage2026-01-09at12.23.54.jpg", name: "AGT Heavy Duty Brass Spray Gun", category: "Spray Gun", price: "₹499.50" },
+  { img: "/assets/img/agttools/ChatGPTImageJan9_2026_02_47_46PM_a2acc59d-a2a5-4991-9780-e7ebca023020.png", name: "AGT Heavy Duty Gardening Axe", category: "Axe", price: "₹799.00" },
+  { img: "/assets/img/agttools/41bBiubDuCL._SL1080.jpg", name: "AGT Heavy Duty Hedge Shears", category: "Shears", price: "₹999.00" },
+  { img: "/assets/img/agttools/03_9bad78c5-c6a4-4aa0-af94-6b2f456da850.jpg", name: "AGT 5L Green Watering Can", category: "Watering Can", price: "₹359.00" },
 ];
 
 export default function RelatedProducts() {
   return (
     <>
-      <h1 className="fw-bold mb-4">Related Plants You May Like</h1>
+      <h1 className="fw-bold mb-4">Related Tools You May Like</h1>
       <div className="vesitable">
         <div className="owl-carousel vegetable-carousel justify-content-center">
           {relatedProducts.map((p, i) => (
@@ -33,9 +33,9 @@ export default function RelatedProducts() {
                 {p.category}
               </div>
               <div className="p-4 pb-0 rounded-bottom text-start">
-                <h4>{p.name}</h4>
-                <p>
-                  Fresh nursery plant carefully grown &amp; delivered in Delhi NCR.
+                <h4 className="text-truncate" title={p.name}>{p.name}</h4>
+                <p className="text-truncate">
+                  Durable high quality alloy steel construction.
                 </p>
                 <div className="d-flex justify-content-between flex-lg-wrap align-items-center">
                   <p className="text-dark fs-5 fw-bold mb-4">{p.price}</p>

@@ -11,7 +11,7 @@ export default function ContactSection() {
               <div className="text-center mx-auto" style={{ maxWidth: 700 }}>
                 <h1 className="text-primary">Get in Touch with {siteConfig.name}</h1>
                 <p className="mb-4">
-                  Have questions about our plants, nursery location, bulk orders, or plant care advice? Reach out to our plant experts anytime!
+                  Have questions about our gardening tools, socket wrench sets, bulk orders, or product warranties? Reach out to our team anytime!
                 </p>
               </div>
             </div>
@@ -46,7 +46,7 @@ export default function ContactSection() {
                   className="w-100 form-control border-0 mb-4"
                   rows={5}
                   cols={10}
-                  placeholder="Your Plant Requirement or Message"
+                  placeholder="Your Tool Requirement or Message"
                 />
                 <button
                   className="w-100 btn form-control border-secondary py-3 bg-white text-primary fw-bold"
@@ -62,7 +62,7 @@ export default function ContactSection() {
               <div className="d-flex p-4 rounded mb-4 bg-white">
                 <i className="fas fa-map-marker-alt fa-2x text-primary me-4" />
                 <div>
-                  <h4>Nursery Address</h4>
+                  <h4>Office Address</h4>
                   <p className="mb-2">{siteConfig.address}</p>
                 </div>
               </div>
@@ -78,7 +78,7 @@ export default function ContactSection() {
               <div className="d-flex p-4 rounded bg-white">
                 <i className="fa fa-phone-alt fa-2x text-primary me-4" />
                 <div>
-                  <h4>Call Nursery</h4>
+                  <h4>Call Us</h4>
                   <p className="mb-1">
                     <a href={`tel:${siteConfig.phone1}`} className="text-dark">{siteConfig.phone1}</a>
                   </p>

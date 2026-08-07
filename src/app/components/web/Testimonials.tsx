@@ -1,23 +1,23 @@
 const testimonials = [
   {
-    text: "Ordered a Jade plant and Rama Tulsi for my balcony in Noida. Received super fresh, healthy plants in robust packaging within 24 hours!",
-    img: "testimonial-1.jpg",
+    text: "Ordered the 108-piece socket set and AGT 3-piece gardening tool set. Outstanding build quality, robust steel, and super fast delivery within 2 days!",
+    img: "avatar-1.jpg",
     name: "Pooja Sharma",
-    profession: "Home Gardener, Noida",
+    profession: "Home & Garden Owner",
     stars: 5,
   },
   {
-    text: "PlantNCR is hands down the best online nursery in Delhi NCR. Their vermicompost quality is top-notch and prices are extremely reasonable.",
-    img: "testimonial-1.jpg",
+    text: "AGT Tools pruning shears and car washing spray gun are top-notch. Sharp blades, comfortable grip, and fantastic value for money.",
+    img: "avatar-1.jpg",
     name: "Rohan Verma",
-    profession: "Plant Enthusiast, New Delhi",
+    profession: "Landscaping Enthusiast",
     stars: 5,
   },
   {
-    text: "Great experience buying air-purifying indoor plants. Dracaena Compacta arrived in pristine condition. Highly recommended nursery!",
-    img: "testimonial-1.jpg",
+    text: "Great experience buying heavy duty hedge shears and watering can. The alloy steel construction feels extremely durable.",
+    img: "avatar-1.jpg",
     name: "Ananya Gupta",
-    profession: "Interior Decorator, Ghaziabad",
+    profession: "Professional Workshop Owner",
     stars: 5,
   },
 ];

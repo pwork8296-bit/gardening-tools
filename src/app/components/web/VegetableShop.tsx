@@ -1,26 +1,26 @@
-const plantItems = [
-  { img: "dracaena.jpg", name: "Dracaena Compacta", category: "Air Purifier", price: "₹299" },
-  { img: "elaichi.jpg", name: "Elaichi Cardamom", category: "Medicinal", price: "₹199" },
-  { img: "plant-1.jpg", name: "Rama Tulsi Plant", category: "Sacred Herb", price: "₹149" },
-  { img: "plant-2.jpg", name: "Jade Plant (Luck)", category: "Succulent", price: "₹199" },
-  { img: "vermicompost.jpg", name: "Organic Vermicompost", category: "Fertilizer", price: "₹99" },
-  { img: "plant-3.jpg", name: "Hibiscus Flower", category: "Flowering", price: "₹249" },
-  { img: "plant-4.jpg", name: "Lucky Bamboo", category: "Good Luck", price: "₹179" },
-  { img: "plant-5.jpg", name: "Cineraria Flower", category: "Winter Flower", price: "₹199" },
+const toolItems = [
+  { img: "WhatsAppImage2025-12-05at17.28.04.jpg", name: "AGT SharpCut Flower Pruner", category: "Pruner", price: "₹450.00" },
+  { img: "WhatsAppImage2025-12-04at11.24.48.jpg", name: "AGT Steel Edge Garden Cutter", category: "Plant Scissor", price: "₹750.00" },
+  { img: "1_903dec75-73f2-4527-9df6-9297a92c1d81.jpg", name: "AGT 5 Piece Garden Tool Set", category: "Tool Set", price: "₹499.00" },
+  { img: "1_7ad34c06-3605-4894-aa97-d7846c70107f.png", name: "AGT 47 Garden Tool Kit", category: "Tool Kit", price: "₹599.00" },
+  { img: "2_eb6f7285-8e38-4868-80f5-799d552a3b9b.jpg", name: "AGT Gardening Hoe (Phawda)", category: "Hand Tool", price: "₹499.00" },
+  { img: "2_ee1030d4-a33f-4e99-8c90-f3d267767c56.jpg", name: "AGT Gardening Secateur Pruner", category: "Flower Cutter", price: "₹520.00" },
+  { img: "2_73b805f3-d1b7-4f44-aac5-9f7e3142d0a9.jpg", name: "AGT Shears German Cutter", category: "Garden Scissor", price: "₹449.00" },
+  { img: "2_3.jpg", name: "AGT Hedge Shear 10 Inch", category: "Hedge Trimmer", price: "₹499.00" },
 ];
 
 export default function VegetableShop() {
   return (
     <div className="container-fluid vesitable py-5">
       <div className="container py-5">
-        <h1 className="mb-0">Trending Nursery Plants</h1>
-        <p className="text-secondary mb-4">Popular choices for home decoration, air purification & gardening.</p>
+        <h1 className="mb-0">Trending Gardening Tools</h1>
+        <p className="text-secondary mb-4">Popular choices for home gardening, branch pruning, landscaping &amp; tool combos.</p>
         <div className="owl-carousel vegetable-carousel justify-content-center">
-          {plantItems.map((v, i) => (
+          {toolItems.map((v, i) => (
             <div className="border border-primary rounded position-relative vesitable-item" key={i}>
               <div className="vesitable-img" style={{ height: "220px", overflow: "hidden" }}>
                 <img
-                  src={`/assets/img/plants/${v.img}`}
+                  src={`/assets/img/agttools/${v.img}`}
                   className="img-fluid w-100 h-100 rounded-top"
                   style={{ objectFit: "cover" }}
                   alt={v.name}
@@ -33,8 +33,8 @@ export default function VegetableShop() {
                 {v.category}
               </div>
               <div className="p-4 rounded-bottom text-start">
-                <h4>{v.name}</h4>
-                <p>Carefully nurtured healthy plant ready for planting.</p>
+                <h4 className="text-truncate" title={v.name}>{v.name}</h4>
+                <p className="text-truncate">Precision-engineered high durability garden tool.</p>
                 <div className="d-flex justify-content-between flex-lg-wrap align-items-center">
                   <p className="text-dark fs-5 fw-bold mb-0">{v.price}</p>
                   <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary">
